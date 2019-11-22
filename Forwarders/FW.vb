@@ -541,8 +541,13 @@ CUDVAT From CustomInfo Where FileNo = '" + valueToSearch.Trim + "'", gs_Conn, 2)
         count = mdl.adapter.Fill(mdl.ds, "AdvExpenses")
     End Sub
 
-    Public Sub InsertAdvExpense()
-        'Dim particular, amount, approvedamount, liquidated As String
+    Public Sub InsertTempAdvExpense()
+        Dim particular, amount, approvedamount, liquidated As String
+
+        particular = Advances.textParticular.Text.Trim
+        amount = Advances.txtAmount.Text.Trim
+        approvedamount = Advances.txtApprovedAmount.Text.Trim
+        liquidated = Advances.txtLiquidated.Text.Trim
 
         CountAdvExpense()
 
@@ -554,10 +559,10 @@ Amount,
 ApprovedAmount,
 Liquidated) VALUES(
 '" & (count + 1) & "', 
-'" & Advances.textParticular.Text.Trim & "', 
-'" & Advances.txtAmount.Text.Trim & "', 
-'" & Advances.txtApprovedAmount.Text.Trim & "', 
-'" & Advances.txtLiquidated.Text.Trim & "'", mdl.conn)
+'" & particular & "', 
+'" & amount & "', 
+'" & approvedamount & "', 
+'" & liquidated & "')", mdl.conn)
 
         mdl.adapter.Fill(mdl.ds, "AdvExpenses")
 
@@ -565,6 +570,34 @@ Liquidated) VALUES(
         Advances.txtAmount.Text = ""
         Advances.txtApprovedAmount.Text = ""
         Advances.txtLiquidated.Text = ""
+
+        updateDataGrid()
+    End Sub
+
+    Public Sub FilterData1(valueToSearch As String)
+        Dim Dataset As New DataSet
+        Dim DataAdapter As New OleDbDataAdapter
+        Dim rs As New ADODB.Recordset
+        rs.CursorLocation = ADODB.CursorLocationEnum.adUseClient
+        rs.CursorType = ADODB.CursorTypeEnum.adOpenStatic
+        rs.LockType = ADODB.LockTypeEnum.adLockBatchOptimistic
+        rs.Open("SELECT ExpenseID, Particular, Amount, ApprovedAmount, Liquidated FROM AdvExpenses", gs_Conn, 3)
+
+        DataAdapter.Fill(Dataset, rs, "AdvExpenses")
+        Advances.dgvAdvExpenses.DataSource = Dataset.Tables(0)
+        Advances.dgvAdvExpenses.ReadOnly = True
+        Advances.dgvAdvExpenses.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Advances.dgvAdvExpenses.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Advances.dgvAdvExpenses.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Advances.dgvAdvExpenses.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Advances.dgvAdvExpenses.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+    End Sub
+
+    Sub updateDataGrid()
+        Advances.dgvAdvExpenses.RowHeadersVisible = False
+        Advances.dgvAdvExpenses.ReadOnly = True
+        Advances.dgvAdvExpenses.AllowUserToResizeRows = False
+        FilterData1("")
     End Sub
 
     Public Sub InsertCustomInfo()
