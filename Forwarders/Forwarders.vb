@@ -578,8 +578,37 @@ Public Class MDIForwarders
     End Sub
 
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
-        FW.InsertDetails()
+        SaveData()
     End Sub
+
+
+    Sub SaveData()
+        Dim node As TreeNode
+        node = TreeView1.SelectedNode
+        Select Case node.Text
+            Case "Advances"
+
+            Case "Liquidation"
+
+            Case "Main"
+
+            Case "Details"
+                FW.InsertDetails()
+            Case "Custom Info"
+                FW.InsertCustomInfo()
+            Case "History"
+
+            Case "Certificate Of Payment"
+
+            Case "Schedule Of Delivery"
+
+            Case "User Settings"
+
+            Case "Billing"
+
+        End Select
+    End Sub
+
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
 
@@ -621,7 +650,7 @@ Public Class MDIForwarders
     End Sub
 
     Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
-        FW.InsertDetails()
+        SaveData()
     End Sub
 
     Private Sub SearchToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SearchToolStripMenuItem1.Click
@@ -703,6 +732,8 @@ Public Class MDIForwarders
                 Details.txtCodeNumber.Text = "CN" + milliseconds.ToString
 
             Case "Custom Info"
+                'Insert Custom Info for Specific File No
+
 
             Case "History"
 

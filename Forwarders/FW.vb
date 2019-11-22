@@ -62,6 +62,35 @@ OBL,
 LCDate,
 LCBank As String
 
+    Public CustomInfoFileNo,
+OfficeCode,
+CECode,
+CountryofOrigin,
+TermsofDelievery,
+Currency,
+ExchangeRate,
+TotalCustomsValue,
+PickupLocation,
+LocationofGoods,
+PortofLoading,
+PortofDischarge,
+StorageBegin,
+StorageEnd,
+DemurrageBegin,
+DemurrageEnd,
+CBM,
+EntryNo,
+TimeSendDate,
+TimeSendTime,
+Selectivity,
+FinalAssessDate,
+FinalAssessTime,
+Payment,
+PaymentTimeDate,
+PaymentTime,
+CUDVAT As String
+
+
     Public Function App_Path() As String
         App_Path = New System.IO.FileInfo(Application.ExecutablePath).DirectoryName
     End Function
@@ -416,6 +445,75 @@ LCBank  From Details Where FileNo = '" + valueToSearch.Trim + "'", gs_Conn, 2)
         'Details.txtCosignee.Text = CStr(rs.Rows(0)("Consignee"))
     End Sub
 
+    Public Sub InsertCustomInfo()
+        Dim payment As String
+        If CustomInfo.CheckBox12.Checked Then
+            payment = "1"
+        Else
+            payment = "0"
+        End If
 
+        mdl.ds = New DataSet
+        mdl.adapter = New SqlDataAdapter("INSERT INTO CustomInfo (
+FileNo,
+OfficeCode,
+CECode,
+CountryofOrigin,
+TermsofDelievery,
+Currency,
+ExchangeRate,
+TotalCustomsValue,
+PickupLocation,
+LocationofGoods,
+PortofLoading,
+PortofDischarge,
+StorageBegin,
+StorageEnd,
+DemurrageBegin,
+DemurrageEnd,
+CBM,
+EntryNo,
+TimeSendDate,
+TimeSendTime,
+Selectivity,
+FinalAssessDate,
+FinalAssessTime,
+Payment,
+PaymentTimeDate,
+PaymentTime,
+CUDVAT
+) 
+VALUES (
+'" & FW.FileNo & "' ,
+'" & CustomInfo.TextBox30.Text.Trim & "' , 
+'" & CustomInfo.TextBox31.Text.Trim & "' , 
+'" & CustomInfo.TextBox32.Text.Trim & "' , 
+'" & CustomInfo.TextBox33.Text.Trim & "' , 
+'" & CustomInfo.TextBox34.Text.Trim & "' , 
+'" & CustomInfo.TextBox35.Text.Trim & "' ,  
+'" & CustomInfo.TextBox36.Text.Trim & "' ,
+'" & CustomInfo.TextBox37.Text.Trim & "' , 
+'" & CustomInfo.TextBox38.Text.Trim & "' , 
+'" & CustomInfo.TextBox39.Text.Trim & "' , 
+'" & CustomInfo.TextBox40.Text.Trim & "' , 
+'" & CustomInfo.ComboBox3.Text & "' , 
+'" & CustomInfo.ComboBox4.Text & "' , 
+'" & CustomInfo.ComboBox2.Text & "' , 
+'" & CustomInfo.ComboBox1.Text & "' , 
+'" & CustomInfo.TextBox41.Text.Trim & "' , 
+'" & CustomInfo.TextBox42.Text.Trim & "' , 
+'" & CustomInfo.ComboBox5.Text & "' , 
+'" & CustomInfo.TextBox45.Text.Trim & "' , 
+'" & CustomInfo.TextBox43.Text.Trim & "' , 
+'" & CustomInfo.ComboBox6.Text & "' , 
+'" & CustomInfo.TextBox46.Text.Trim & "' , 
+'" & payment & "' , 
+'" & CustomInfo.ComboBox7.Text & "' , 
+'" & CustomInfo.TextBox47.Text.Trim & "' , 
+'" & CustomInfo.TextBox44.Text.Trim & "'  
+)", mdl.conn)
+        mdl.adapter.Fill(mdl.ds, "CustomInfo")
+        MessageBox.Show("Custom information successfully added.")
+    End Sub
 
 End Module

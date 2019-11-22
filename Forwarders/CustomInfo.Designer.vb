@@ -100,6 +100,10 @@ Partial Class CustomInfo
         Me.txtFileNo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboStatus = New System.Windows.Forms.ComboBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Panel7.SuspendLayout()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
@@ -139,13 +143,13 @@ Partial Class CustomInfo
         Me.Panel7.Controls.Add(Me.TextBox30)
         Me.Panel7.Location = New System.Drawing.Point(25, 225)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(866, 404)
+        Me.Panel7.Size = New System.Drawing.Size(866, 455)
         Me.Panel7.TabIndex = 1
         '
         'DataGridView4
         '
         Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView4.Location = New System.Drawing.Point(3, 245)
+        Me.DataGridView4.Location = New System.Drawing.Point(10, 316)
         Me.DataGridView4.Name = "DataGridView4"
         Me.DataGridView4.Size = New System.Drawing.Size(756, 126)
         Me.DataGridView4.TabIndex = 26
@@ -307,13 +311,17 @@ Partial Class CustomInfo
         'Panel8
         '
         Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel8.Controls.Add(Me.Label14)
+        Me.Panel8.Controls.Add(Me.Label15)
+        Me.Panel8.Controls.Add(Me.ComboBox1)
+        Me.Panel8.Controls.Add(Me.ComboBox2)
         Me.Panel8.Controls.Add(Me.Label59)
         Me.Panel8.Controls.Add(Me.Label58)
         Me.Panel8.Controls.Add(Me.ComboBox4)
         Me.Panel8.Controls.Add(Me.ComboBox3)
         Me.Panel8.Location = New System.Drawing.Point(300, 84)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(260, 66)
+        Me.Panel8.Size = New System.Drawing.Size(260, 125)
         Me.Panel8.TabIndex = 24
         '
         'Label59
@@ -321,9 +329,9 @@ Partial Class CustomInfo
         Me.Label59.AutoSize = True
         Me.Label59.Location = New System.Drawing.Point(12, 34)
         Me.Label59.Name = "Label59"
-        Me.Label59.Size = New System.Drawing.Size(89, 13)
+        Me.Label59.Size = New System.Drawing.Size(66, 13)
         Me.Label59.TabIndex = 26
-        Me.Label59.Text = "Demurrage Begin"
+        Me.Label59.Text = "Storage End"
         '
         'Label58
         '
@@ -353,7 +361,7 @@ Partial Class CustomInfo
         'Label57
         '
         Me.Label57.AutoSize = True
-        Me.Label57.Location = New System.Drawing.Point(313, 162)
+        Me.Label57.Location = New System.Drawing.Point(313, 218)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(30, 13)
         Me.Label57.TabIndex = 23
@@ -379,7 +387,7 @@ Partial Class CustomInfo
         '
         'TextBox41
         '
-        Me.TextBox41.Location = New System.Drawing.Point(415, 159)
+        Me.TextBox41.Location = New System.Drawing.Point(415, 215)
         Me.TextBox41.Name = "TextBox41"
         Me.TextBox41.Size = New System.Drawing.Size(85, 20)
         Me.TextBox41.TabIndex = 20
@@ -417,7 +425,7 @@ Partial Class CustomInfo
         'Label53
         '
         Me.Label53.AutoSize = True
-        Me.Label53.Location = New System.Drawing.Point(15, 188)
+        Me.Label53.Location = New System.Drawing.Point(15, 256)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(87, 13)
         Me.Label53.TabIndex = 15
@@ -488,7 +496,7 @@ Partial Class CustomInfo
         '
         'TextBox37
         '
-        Me.TextBox37.Location = New System.Drawing.Point(121, 185)
+        Me.TextBox37.Location = New System.Drawing.Point(121, 256)
         Me.TextBox37.Multiline = True
         Me.TextBox37.Name = "TextBox37"
         Me.TextBox37.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -802,6 +810,40 @@ Partial Class CustomInfo
         Me.cboStatus.Size = New System.Drawing.Size(121, 21)
         Me.cboStatus.TabIndex = 97
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(12, 67)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(89, 13)
+        Me.Label14.TabIndex = 30
+        Me.Label14.Text = "Demurrage Begin"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(12, 92)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(81, 13)
+        Me.Label15.TabIndex = 29
+        Me.Label15.Text = "Demurrage End"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(114, 89)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 28
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(114, 61)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox2.TabIndex = 27
+        '
         'CustomInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -924,4 +966,8 @@ Partial Class CustomInfo
     Friend WithEvents txtFileNo As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents cboStatus As ComboBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBox2 As ComboBox
 End Class

@@ -36,4 +36,15 @@
 
     End Sub
 
+    Private Sub Panel8_Paint(sender As Object, e As PaintEventArgs) Handles Panel8.Paint
+
+    End Sub
+
+    Private Sub Label58_Click(sender As Object, e As EventArgs) Handles Label58.Click
+
+    End Sub
+
+    Private Sub ComboBox6_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox6.SelectedIndexChanged
+
+    End Sub
 End Class
