@@ -536,9 +536,9 @@ CUDVAT From CustomInfo Where FileNo = '" + valueToSearch.Trim + "'", gs_Conn, 2)
 
     Sub CountAdvExpense()
         mdl.ds = New DataSet
-        mdl.adapter = New SqlDataAdapter("SELECT * FROM AdvExpenses", mdl.conn)
+        mdl.adapter = New SqlDataAdapter("SELECT * FROM tempAdvExpenses", mdl.conn)
 
-        count = mdl.adapter.Fill(mdl.ds, "AdvExpenses")
+        count = mdl.adapter.Fill(mdl.ds, "tempAdvExpenses")
     End Sub
 
     Public Sub InsertTempAdvExpense()
@@ -552,7 +552,7 @@ CUDVAT From CustomInfo Where FileNo = '" + valueToSearch.Trim + "'", gs_Conn, 2)
         CountAdvExpense()
 
         mdl.ds = New DataSet
-        mdl.adapter = New SqlDataAdapter("INSERT INTO AdvExpenses(
+        mdl.adapter = New SqlDataAdapter("INSERT INTO tempAdvExpenses(
 ExpenseID,
 Particular,
 Amount,
@@ -564,7 +564,7 @@ Liquidated) VALUES(
 '" & approvedamount & "', 
 '" & liquidated & "')", mdl.conn)
 
-        mdl.adapter.Fill(mdl.ds, "AdvExpenses")
+        mdl.adapter.Fill(mdl.ds, "tempAdvExpenses")
 
         Advances.textParticular.Text = ""
         Advances.txtAmount.Text = ""
@@ -581,7 +581,7 @@ Liquidated) VALUES(
         rs.CursorLocation = ADODB.CursorLocationEnum.adUseClient
         rs.CursorType = ADODB.CursorTypeEnum.adOpenStatic
         rs.LockType = ADODB.LockTypeEnum.adLockBatchOptimistic
-        rs.Open("SELECT ExpenseID, Particular, Amount, ApprovedAmount, Liquidated FROM AdvExpenses", gs_Conn, 3)
+        rs.Open("SELECT ExpenseID, Particular, Amount, ApprovedAmount, Liquidated FROM tempAdvExpenses", gs_Conn, 3)
 
         DataAdapter.Fill(Dataset, rs, "AdvExpenses")
         Advances.dgvAdvExpenses.DataSource = Dataset.Tables(0)
@@ -765,4 +765,107 @@ IssuedDate From CertificateOfPayment Where FileNo = '" + valueToSearch.Trim + "'
         End If
     End Sub
 
+    Public Sub InsertAdvances()
+        Dim receipted, refno, employee, fileno, customer, consignee, remarks, status, shipmentcode, transdate, cano, port As String
+
+        If Advances.chkReceipted.Checked Then
+            receipted = "1"
+        Else
+            receipted = "0"
+        End If
+
+        refno = Advances.txtRefNo.Text.Trim
+        employee = Advances.txtEmployee.Text.Trim
+        fileno = Advances.txtFileNo.Text.Trim
+        customer = Advances.txtCustomer.Text.Trim
+        consignee = Advances.txtConsignee.Text.Trim
+        remarks = Advances.txtRemarks.Text.Trim
+        status = Advances.cboStatus.Text.Trim
+        shipmentcode = Advances.txtShipmentCode.Text.Trim
+        transdate = Advances.dtpTransDate.Text.Trim
+        cano = Advances.txtCANo.Text.Trim
+        port = Advances.txtPort.Text.Trim
+
+        mdl.ds = New DataSet
+        mdl.adapter = New SqlDataAdapter("INSERT INTO Advances1(
+RefNo, 
+Employee, 
+FileNo, 
+Customer, 
+Consignee, 
+Remarks, 
+Status, 
+ShipmentCode, 
+TranDate, 
+CANo, 
+Port, 
+Receipted) VALUES(
+'" & refno & "', 
+'" & employee & "', 
+'" & fileno & "', 
+'" & customer & "', 
+'" & consignee & "',
+'" & remarks & "', 
+'" & status & "', 
+'" & shipmentcode & "', 
+'" & transdate & "', 
+'" & cano & "', 
+'" & port & "', 
+'" & receipted & "')", mdl.conn)
+        mdl.adapter.Fill(mdl.ds, "Advances1")
+
+        Dim note, encodedby, notedby, approvedby, comments As String
+
+        note = Advances.txtNote.Text.Trim
+        encodedby = Advances.txtEncodedBy.Text.Trim
+        notedby = Advances.txtNotedBy.Text.Trim
+        approvedby = Advances.txtApprovedBy.Text.Trim
+        comments = Advances.txtComments.Text.Trim
+
+        mdl.ds = New DataSet
+        mdl.adapter = New SqlDataAdapter("INSERT INTO Advances3(
+FileNo, 
+Note, 
+EncodedBy, 
+NotedBy, 
+ApprovedBy, 
+Comment) VALUES(
+'" & fileno & "', 
+'" & note & "', 
+'" & encodedby & "', 
+'" & notedby & "', 
+'" & approvedby & "', 
+'" & comments & "')", mdl.conn)
+        mdl.adapter.Fill(mdl.ds, "Advances3")
+
+        mdl.ds = New DataSet
+        mdl.adapter = New SqlDataAdapter("INSERT INTO Advances2 (
+ExpenseID, 
+Particular, 
+Amount,
+ApprovedAmount, 
+Liquidated, 
+FileNo) SELECT
+ExpenseID, 
+Particular, 
+Amount, 
+ApprovedAmount, 
+Liquidated,'" & fileno & "' FROM tempAdvExpenses 
+", mdl.conn)
+
+        mdl.adapter.Fill(mdl.ds, "Advances2")
+        MessageBox.Show("Advances successfully added.")
+
+        truncate1()
+    End Sub
+    Public Sub truncate1()
+        Dim query As String = "TRUNCATE TABLE tempAdvExpenses"
+
+        Using conn As New SqlClient.SqlConnection(mdl.connectionString)
+            Dim cmd As New SqlClient.SqlCommand(query, conn)
+            conn.Open()
+            cmd.ExecuteNonQuery()
+            conn.Close()
+        End Using
+    End Sub
 End Module

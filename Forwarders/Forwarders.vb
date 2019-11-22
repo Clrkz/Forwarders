@@ -581,7 +581,7 @@ Public Class MDIForwarders
         node = TreeView1.SelectedNode
         Select Case node.Text
             Case "Advances"
-
+                FW.InsertAdvances()
             Case "Liquidation"
 
             Case "Main"
