@@ -588,9 +588,9 @@ Public Class MDIForwarders
             Select Case node.Text
                 Case "Advances"
 
-                        Case "Liquidation"
-
-                        Case "Main"
+                Case "Liquidation"
+                    FW.Liquid()
+                Case "Main"
 
                 Case "Details"
                     FW.InsertDetails()
