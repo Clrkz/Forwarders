@@ -870,4 +870,22 @@ Liquidated,'" & fileno & "' FROM tempAdvExpenses
         Advances.ClearDetails()
         MessageBox.Show("Advances successfully added.")
     End Sub
+
+    Public Sub Liquid()
+        Dim Dataset As New DataSet
+        Dim DataAdapter As New OleDbDataAdapter
+        Dim rs As New ADODB.Recordset
+
+        Dim userid As String, password As String, firstname As String, middlename As String, lastname As String
+        rs.CursorLocation = ADODB.CursorLocationEnum.adUseClient
+        rs.CursorType = ADODB.CursorTypeEnum.adOpenStatic
+        rs.LockType = ADODB.LockTypeEnum.adLockBatchOptimistic
+
+        rs.Open("SELECT userid, password, firstname, middlename, lastname FROM TempUsers", gs_Conn, 3)
+        userid = rs.Fields("userid").Value
+        password = Security.GetHash(rs.Fields("password").Value)
+        firstname = rs.Fields("firstname").Value
+        middlename = rs.Fields("middlename").Value
+        lastname = rs.Fields("lastname").Value
+    End Sub
 End Module

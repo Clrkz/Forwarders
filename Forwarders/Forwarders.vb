@@ -579,6 +579,7 @@ Public Class MDIForwarders
         SaveData()
     End Sub
 
+<<<<<<< HEAD
 
 
     Sub SaveData()
@@ -611,10 +612,11 @@ Public Class MDIForwarders
             End Select
             saveFile = False
         End If
+=======
+    Public Sub SaveData()
+>>>>>>> 5c35c7574fd03a28e5abfdb5fe458ab1077a388c
 
     End Sub
-
-
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         saveFile = False
 
@@ -623,7 +625,7 @@ Public Class MDIForwarders
         Select Case node.Text
             Case "Advances"
                 Advances.ClearDetails()
-                'MessageBox.Show("Transaction Cancelled")
+            'MessageBox.Show("Transaction Cancelled")
             Case "Liquidation"
 
             Case "Main"
