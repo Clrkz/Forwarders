@@ -4,11 +4,11 @@
         Me.AutoScroll = True
     End Sub
 
-    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles dtpTransDate.ValueChanged
 
     End Sub
 
     Private Sub btnInsert_Click(sender As Object, e As EventArgs) Handles btnInsert.Click
-        FW.InsertAdvExpense()
+        FW.InsertTempAdvExpense()
     End Sub
 End Class

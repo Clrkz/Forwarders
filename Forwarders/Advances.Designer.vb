@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Advances
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,47 +20,47 @@ Partial Class Advances
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtRefNo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.txtEmployee = New System.Windows.Forms.TextBox()
+        Me.txtFileNo = New System.Windows.Forms.TextBox()
+        Me.txtCustomer = New System.Windows.Forms.TextBox()
+        Me.txtConsignee = New System.Windows.Forms.TextBox()
+        Me.txtRemarks = New System.Windows.Forms.TextBox()
+        Me.cboStatus = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txtShipmentCode = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpTransDate = New System.Windows.Forms.DateTimePicker()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txtCANo = New System.Windows.Forms.TextBox()
+        Me.txtPort = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvAdvExpenses = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.txtTotalLiquidated = New System.Windows.Forms.TextBox()
+        Me.txtTotalApprovedAmount = New System.Windows.Forms.TextBox()
+        Me.txtTotalAmount = New System.Windows.Forms.TextBox()
+        Me.txtTotalAll = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.txtEncodedBy = New System.Windows.Forms.TextBox()
+        Me.txtNotedBy = New System.Windows.Forms.TextBox()
+        Me.txtApprovedBy = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.txtComments = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.btnInsert = New System.Windows.Forms.Button()
         Me.txtLiquidated = New System.Windows.Forms.TextBox()
@@ -71,7 +71,7 @@ Partial Class Advances
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvAdvExpenses, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CheckBox1
@@ -85,12 +85,12 @@ Partial Class Advances
         Me.CheckBox1.Text = "Receipted"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtRefNo
         '
-        Me.TextBox1.Location = New System.Drawing.Point(78, 36)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(156, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.txtRefNo.Location = New System.Drawing.Point(78, 36)
+        Me.txtRefNo.Name = "txtRefNo"
+        Me.txtRefNo.Size = New System.Drawing.Size(156, 20)
+        Me.txtRefNo.TabIndex = 1
         '
         'Label1
         '
@@ -152,50 +152,50 @@ Partial Class Advances
         Me.Label6.TabIndex = 7
         Me.Label6.Text = "Consignee"
         '
-        'TextBox2
+        'txtEmployee
         '
-        Me.TextBox2.Location = New System.Drawing.Point(78, 57)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(156, 20)
-        Me.TextBox2.TabIndex = 8
+        Me.txtEmployee.Location = New System.Drawing.Point(78, 57)
+        Me.txtEmployee.Name = "txtEmployee"
+        Me.txtEmployee.Size = New System.Drawing.Size(156, 20)
+        Me.txtEmployee.TabIndex = 8
         '
-        'TextBox3
+        'txtFileNo
         '
-        Me.TextBox3.Location = New System.Drawing.Point(78, 79)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(156, 20)
-        Me.TextBox3.TabIndex = 9
+        Me.txtFileNo.Location = New System.Drawing.Point(78, 79)
+        Me.txtFileNo.Name = "txtFileNo"
+        Me.txtFileNo.Size = New System.Drawing.Size(156, 20)
+        Me.txtFileNo.TabIndex = 9
         '
-        'TextBox4
+        'txtCustomer
         '
-        Me.TextBox4.Location = New System.Drawing.Point(78, 101)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(156, 20)
-        Me.TextBox4.TabIndex = 10
+        Me.txtCustomer.Location = New System.Drawing.Point(78, 101)
+        Me.txtCustomer.Name = "txtCustomer"
+        Me.txtCustomer.Size = New System.Drawing.Size(156, 20)
+        Me.txtCustomer.TabIndex = 10
         '
-        'TextBox5
+        'txtConsignee
         '
-        Me.TextBox5.Location = New System.Drawing.Point(78, 123)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(156, 20)
-        Me.TextBox5.TabIndex = 11
+        Me.txtConsignee.Location = New System.Drawing.Point(78, 123)
+        Me.txtConsignee.Name = "txtConsignee"
+        Me.txtConsignee.Size = New System.Drawing.Size(156, 20)
+        Me.txtConsignee.TabIndex = 11
         '
-        'TextBox6
+        'txtRemarks
         '
-        Me.TextBox6.Location = New System.Drawing.Point(78, 144)
-        Me.TextBox6.Multiline = True
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox6.Size = New System.Drawing.Size(650, 53)
-        Me.TextBox6.TabIndex = 12
+        Me.txtRemarks.Location = New System.Drawing.Point(78, 144)
+        Me.txtRemarks.Multiline = True
+        Me.txtRemarks.Name = "txtRemarks"
+        Me.txtRemarks.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtRemarks.Size = New System.Drawing.Size(650, 53)
+        Me.txtRemarks.TabIndex = 12
         '
-        'ComboBox1
+        'cboStatus
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(376, 35)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 13
+        Me.cboStatus.FormattingEnabled = True
+        Me.cboStatus.Location = New System.Drawing.Point(376, 35)
+        Me.cboStatus.Name = "cboStatus"
+        Me.cboStatus.Size = New System.Drawing.Size(121, 21)
+        Me.cboStatus.TabIndex = 13
         '
         'Label7
         '
@@ -215,12 +215,12 @@ Partial Class Advances
         Me.Label8.TabIndex = 15
         Me.Label8.Text = "ADMINISTRATOR SYSTEM,."
         '
-        'TextBox7
+        'txtShipmentCode
         '
-        Me.TextBox7.Location = New System.Drawing.Point(376, 79)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(121, 20)
-        Me.TextBox7.TabIndex = 16
+        Me.txtShipmentCode.Location = New System.Drawing.Point(376, 79)
+        Me.txtShipmentCode.Name = "txtShipmentCode"
+        Me.txtShipmentCode.Size = New System.Drawing.Size(121, 20)
+        Me.txtShipmentCode.TabIndex = 16
         '
         'Label9
         '
@@ -231,36 +231,36 @@ Partial Class Advances
         Me.Label9.TabIndex = 17
         Me.Label9.Text = "Shipment Code"
         '
-        'DateTimePicker1
+        'dtpTransDate
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(565, 36)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(83, 20)
-        Me.DateTimePicker1.TabIndex = 18
+        Me.dtpTransDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpTransDate.Location = New System.Drawing.Point(565, 36)
+        Me.dtpTransDate.Name = "dtpTransDate"
+        Me.dtpTransDate.Size = New System.Drawing.Size(83, 20)
+        Me.dtpTransDate.TabIndex = 18
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(522, 42)
+        Me.Label10.Location = New System.Drawing.Point(503, 42)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(37, 13)
+        Me.Label10.Size = New System.Drawing.Size(60, 13)
         Me.Label10.TabIndex = 19
-        Me.Label10.Text = "Status"
+        Me.Label10.Text = "Trans Date"
         '
-        'TextBox8
+        'txtCANo
         '
-        Me.TextBox8.Location = New System.Drawing.Point(565, 62)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(83, 20)
-        Me.TextBox8.TabIndex = 20
+        Me.txtCANo.Location = New System.Drawing.Point(565, 62)
+        Me.txtCANo.Name = "txtCANo"
+        Me.txtCANo.Size = New System.Drawing.Size(83, 20)
+        Me.txtCANo.TabIndex = 20
         '
-        'TextBox9
+        'txtPort
         '
-        Me.TextBox9.Location = New System.Drawing.Point(565, 88)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(83, 20)
-        Me.TextBox9.TabIndex = 21
+        Me.txtPort.Location = New System.Drawing.Point(565, 88)
+        Me.txtPort.Name = "txtPort"
+        Me.txtPort.Size = New System.Drawing.Size(83, 20)
+        Me.txtPort.TabIndex = 21
         '
         'Label11
         '
@@ -280,13 +280,13 @@ Partial Class Advances
         Me.Label12.TabIndex = 23
         Me.Label12.Text = "Port"
         '
-        'DataGridView1
+        'dgvAdvExpenses
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 203)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(719, 195)
-        Me.DataGridView1.TabIndex = 24
+        Me.dgvAdvExpenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvAdvExpenses.Location = New System.Drawing.Point(12, 203)
+        Me.dgvAdvExpenses.Name = "dgvAdvExpenses"
+        Me.dgvAdvExpenses.Size = New System.Drawing.Size(719, 195)
+        Me.dgvAdvExpenses.TabIndex = 24
         '
         'Button1
         '
@@ -307,35 +307,35 @@ Partial Class Advances
         Me.Label13.TabIndex = 26
         Me.Label13.Text = "Total"
         '
-        'TextBox10
+        'txtTotalLiquidated
         '
-        Me.TextBox10.Location = New System.Drawing.Point(613, 397)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox10.TabIndex = 27
+        Me.txtTotalLiquidated.Location = New System.Drawing.Point(613, 397)
+        Me.txtTotalLiquidated.Name = "txtTotalLiquidated"
+        Me.txtTotalLiquidated.Size = New System.Drawing.Size(100, 20)
+        Me.txtTotalLiquidated.TabIndex = 27
         '
-        'TextBox11
+        'txtTotalApprovedAmount
         '
-        Me.TextBox11.Location = New System.Drawing.Point(514, 397)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox11.TabIndex = 28
+        Me.txtTotalApprovedAmount.Location = New System.Drawing.Point(514, 397)
+        Me.txtTotalApprovedAmount.Name = "txtTotalApprovedAmount"
+        Me.txtTotalApprovedAmount.Size = New System.Drawing.Size(100, 20)
+        Me.txtTotalApprovedAmount.TabIndex = 28
         '
-        'TextBox12
+        'txtTotalAmount
         '
-        Me.TextBox12.Location = New System.Drawing.Point(415, 397)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox12.TabIndex = 29
+        Me.txtTotalAmount.Location = New System.Drawing.Point(415, 397)
+        Me.txtTotalAmount.Name = "txtTotalAmount"
+        Me.txtTotalAmount.Size = New System.Drawing.Size(100, 20)
+        Me.txtTotalAmount.TabIndex = 29
         '
-        'TextBox13
+        'txtTotalAll
         '
-        Me.TextBox13.Location = New System.Drawing.Point(135, 434)
-        Me.TextBox13.Multiline = True
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox13.Size = New System.Drawing.Size(578, 53)
-        Me.TextBox13.TabIndex = 30
+        Me.txtTotalAll.Location = New System.Drawing.Point(135, 434)
+        Me.txtTotalAll.Multiline = True
+        Me.txtTotalAll.Name = "txtTotalAll"
+        Me.txtTotalAll.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtTotalAll.Size = New System.Drawing.Size(578, 53)
+        Me.txtTotalAll.TabIndex = 30
         '
         'Label14
         '
@@ -347,26 +347,26 @@ Partial Class Advances
         Me.Label14.TabIndex = 31
         Me.Label14.Text = "Total"
         '
-        'TextBox14
+        'txtEncodedBy
         '
-        Me.TextBox14.Location = New System.Drawing.Point(135, 493)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox14.TabIndex = 32
+        Me.txtEncodedBy.Location = New System.Drawing.Point(135, 493)
+        Me.txtEncodedBy.Name = "txtEncodedBy"
+        Me.txtEncodedBy.Size = New System.Drawing.Size(100, 20)
+        Me.txtEncodedBy.TabIndex = 32
         '
-        'TextBox15
+        'txtNotedBy
         '
-        Me.TextBox15.Location = New System.Drawing.Point(297, 493)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox15.TabIndex = 33
+        Me.txtNotedBy.Location = New System.Drawing.Point(297, 493)
+        Me.txtNotedBy.Name = "txtNotedBy"
+        Me.txtNotedBy.Size = New System.Drawing.Size(100, 20)
+        Me.txtNotedBy.TabIndex = 33
         '
-        'TextBox16
+        'txtApprovedBy
         '
-        Me.TextBox16.Location = New System.Drawing.Point(477, 493)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox16.TabIndex = 34
+        Me.txtApprovedBy.Location = New System.Drawing.Point(477, 493)
+        Me.txtApprovedBy.Name = "txtApprovedBy"
+        Me.txtApprovedBy.Size = New System.Drawing.Size(100, 20)
+        Me.txtApprovedBy.TabIndex = 34
         '
         'Label15
         '
@@ -398,14 +398,14 @@ Partial Class Advances
         Me.Label17.TabIndex = 37
         Me.Label17.Text = "Approved By"
         '
-        'TextBox17
+        'txtComments
         '
-        Me.TextBox17.Location = New System.Drawing.Point(135, 519)
-        Me.TextBox17.Multiline = True
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox17.Size = New System.Drawing.Size(262, 53)
-        Me.TextBox17.TabIndex = 38
+        Me.txtComments.Location = New System.Drawing.Point(135, 519)
+        Me.txtComments.Multiline = True
+        Me.txtComments.Name = "txtComments"
+        Me.txtComments.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtComments.Size = New System.Drawing.Size(262, 53)
+        Me.txtComments.TabIndex = 38
         '
         'Label18
         '
@@ -505,93 +505,93 @@ Partial Class Advances
         Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.Label18)
-        Me.Controls.Add(Me.TextBox17)
+        Me.Controls.Add(Me.txtComments)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.TextBox16)
-        Me.Controls.Add(Me.TextBox15)
-        Me.Controls.Add(Me.TextBox14)
+        Me.Controls.Add(Me.txtApprovedBy)
+        Me.Controls.Add(Me.txtNotedBy)
+        Me.Controls.Add(Me.txtEncodedBy)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.TextBox13)
-        Me.Controls.Add(Me.TextBox12)
-        Me.Controls.Add(Me.TextBox11)
-        Me.Controls.Add(Me.TextBox10)
+        Me.Controls.Add(Me.txtTotalAll)
+        Me.Controls.Add(Me.txtTotalAmount)
+        Me.Controls.Add(Me.txtTotalApprovedAmount)
+        Me.Controls.Add(Me.txtTotalLiquidated)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvAdvExpenses)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.TextBox9)
-        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.txtPort)
+        Me.Controls.Add(Me.txtCANo)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.dtpTransDate)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.txtShipmentCode)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.cboStatus)
+        Me.Controls.Add(Me.txtRemarks)
+        Me.Controls.Add(Me.txtConsignee)
+        Me.Controls.Add(Me.txtCustomer)
+        Me.Controls.Add(Me.txtFileNo)
+        Me.Controls.Add(Me.txtEmployee)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtRefNo)
         Me.Controls.Add(Me.CheckBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Advances"
         Me.Text = "Advances"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvAdvExpenses, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtRefNo As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents txtEmployee As TextBox
+    Friend WithEvents txtFileNo As TextBox
+    Friend WithEvents txtCustomer As TextBox
+    Friend WithEvents txtConsignee As TextBox
+    Friend WithEvents txtRemarks As TextBox
+    Friend WithEvents cboStatus As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents txtShipmentCode As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtpTransDate As DateTimePicker
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents txtCANo As TextBox
+    Friend WithEvents txtPort As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvAdvExpenses As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents txtTotalLiquidated As TextBox
+    Friend WithEvents txtTotalApprovedAmount As TextBox
+    Friend WithEvents txtTotalAmount As TextBox
+    Friend WithEvents txtTotalAll As TextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents TextBox15 As TextBox
-    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents txtEncodedBy As TextBox
+    Friend WithEvents txtNotedBy As TextBox
+    Friend WithEvents txtApprovedBy As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents TextBox17 As TextBox
+    Friend WithEvents txtComments As TextBox
     Friend WithEvents Label18 As Label
     Friend WithEvents btnInsert As Button
     Friend WithEvents txtLiquidated As TextBox

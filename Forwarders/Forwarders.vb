@@ -629,9 +629,9 @@ Public Class MDIForwarders
 
             Case "Custom Info"
                 CustomInfo.ClearDetails()
-                'Details.DataGridView1.DataSource = Nothing
-                'Details.DataGridView1.Refresh()
-                'MessageBox.Show("Transaction Cancelled")
+            'Details.DataGridView1.DataSource = Nothing
+            'Details.DataGridView1.Refresh()
+            'MessageBox.Show("Transaction Cancelled")
             Case "History"
                 History.ClearDetails()
             Case "Certificate Of Payment"
