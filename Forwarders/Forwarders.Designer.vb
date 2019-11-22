@@ -400,7 +400,7 @@ Partial Class MDIForwarders
         '
         'ToolStrip
         '
-        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.ToolStripButton1, Me.ToolStripButton2, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.tsbSearch, Me.ToolStripSeparator1, Me.PrintToolStripButton, Me.PrintPreviewToolStripButton, Me.ToolStripSeparator2, Me.HelpToolStripButton, Me.ToolStripSeparator9, Me.tsbMoveLast, Me.tsbPrevious, Me.tsbNext, Me.tsbMoveFirst})
+        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.ToolStripButton1, Me.ToolStripButton2, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.tsbSearch, Me.PrintToolStripButton, Me.ToolStripSeparator1, Me.PrintPreviewToolStripButton, Me.ToolStripSeparator2, Me.HelpToolStripButton, Me.ToolStripSeparator9, Me.tsbMoveLast, Me.tsbPrevious, Me.tsbNext, Me.tsbMoveFirst})
         Me.ToolStrip.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip.Name = "ToolStrip"
         Me.ToolStrip.Size = New System.Drawing.Size(964, 25)

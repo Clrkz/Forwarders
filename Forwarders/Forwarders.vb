@@ -579,40 +579,9 @@ Public Class MDIForwarders
         SaveData()
     End Sub
 
-
-    Sub SaveData()
-
-        If saveFile Then
-            Dim node As TreeNode
-            node = TreeView1.SelectedNode
-            Select Case node.Text
-                Case "Advances"
-
-                Case "Liquidation"
-                    FW.Liquid()
-                Case "Main"
-
-                Case "Details"
-                    FW.InsertDetails()
-                Case "Custom Info"
-                    FW.InsertCustomInfo()
-                Case "History"
-
-                Case "Certificate Of Payment"
-                    FW.InsertCertificateOfPayment()
-                Case "Schedule Of Delivery"
-
-                Case "User Settings"
-
-                Case "Billing"
-
-            End Select
-            saveFile = False
-        End If
+    Public Sub SaveData()
 
     End Sub
-
-
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         saveFile = False
 
@@ -620,7 +589,8 @@ Public Class MDIForwarders
         node = TreeView1.SelectedNode
         Select Case node.Text
             Case "Advances"
-
+                Advances.ClearDetails()
+            'MessageBox.Show("Transaction Cancelled")
             Case "Liquidation"
 
             Case "Main"
@@ -669,7 +639,12 @@ Public Class MDIForwarders
         node = TreeView1.SelectedNode
         Select Case node.Text
             Case "Advances"
-
+                If Advances.txtFileNo.Text = "" Then
+                    MessageBox.Show("Enter File Number")
+                Else
+                    FW.GetAllDataDetails(Advances.txtFileNo.Text)
+                    Advances.populateToFields()
+                End If
             Case "Liquidation"
 
             Case "Main"
@@ -728,7 +703,8 @@ Public Class MDIForwarders
         node = TreeView1.SelectedNode
         Select Case node.Text
             Case "Advances"
-
+                Dim milliseconds = CLng(DateTime.UtcNow.Subtract(New DateTime(1970, 1, 1)).TotalMilliseconds)
+                Advances.txtRefNo.Text = "RN" + milliseconds.ToString
             Case "Liquidation"
 
             Case "Main"
@@ -753,5 +729,9 @@ Public Class MDIForwarders
             Case "Billing"
 
         End Select
+    End Sub
+
+    Private Sub ToolStripStatusLabel3_Click(sender As Object, e As EventArgs) Handles ToolStripStatusLabel3.Click
+
     End Sub
 End Class
