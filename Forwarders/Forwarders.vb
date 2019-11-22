@@ -580,23 +580,14 @@ Public Class MDIForwarders
     End Sub
 
 
-    Sub SaveData()
-<<<<<<< HEAD
-        Dim node As TreeNode
-        node = TreeView1.SelectedNode
-        Select Case node.Text
-            Case "Advances"
-                FW.InsertAdvances()
-            Case "Liquidation"
-=======
+    Sub SaveData() 
         If saveFile Then
             Dim node As TreeNode
             node = TreeView1.SelectedNode
             Select Case node.Text
                 Case "Advances"
-
+                    FW.InsertAdvances()
                 Case "Liquidation"
->>>>>>> 86cf9e23fcc6e0a66900b29952b55cfe3618d050
 
                 Case "Main"
 
@@ -628,7 +619,8 @@ Public Class MDIForwarders
         node = TreeView1.SelectedNode
         Select Case node.Text
             Case "Advances"
-
+                Advances.ClearDetails()
+                'MessageBox.Show("Transaction Cancelled")
             Case "Liquidation"
 
             Case "Main"
@@ -677,7 +669,12 @@ Public Class MDIForwarders
         node = TreeView1.SelectedNode
         Select Case node.Text
             Case "Advances"
-
+                If Advances.txtFileNo.Text = "" Then
+                    MessageBox.Show("Enter File Number")
+                Else
+                    FW.GetAllDataDetails(Advances.txtFileNo.Text)
+                    Advances.populateToFields()
+                End If
             Case "Liquidation"
 
             Case "Main"
@@ -736,7 +733,8 @@ Public Class MDIForwarders
         node = TreeView1.SelectedNode
         Select Case node.Text
             Case "Advances"
-
+                Dim milliseconds = CLng(DateTime.UtcNow.Subtract(New DateTime(1970, 1, 1)).TotalMilliseconds)
+                Advances.txtRefNo.Text = "RN" + milliseconds.ToString
             Case "Liquidation"
 
             Case "Main"
@@ -761,5 +759,9 @@ Public Class MDIForwarders
             Case "Billing"
 
         End Select
+    End Sub
+
+    Private Sub ToolStripStatusLabel3_Click(sender As Object, e As EventArgs) Handles ToolStripStatusLabel3.Click
+
     End Sub
 End Class

@@ -3,7 +3,16 @@
         Me.AutoScroll = True
         cboStatus.SelectedIndex = 0
     End Sub
-
+    Private Sub txtFileNo_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtFileNo.GotFocus
+        If txtFileNo.Text = "F3 to search" Then
+            txtFileNo.Text = ""
+        End If
+    End Sub
+    Private Sub txtFileNo_LostFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtFileNo.LostFocus
+        If txtFileNo.Text = "" Then
+            txtFileNo.Text = "F3 to search"
+        End If
+    End Sub
     Public Sub populateToFields()
         txtFileNo.Text = FW.FileNo
         txtCustomer.Text = FW.Customer

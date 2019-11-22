@@ -165,6 +165,7 @@ Partial Class Advances
         Me.txtFileNo.Name = "txtFileNo"
         Me.txtFileNo.Size = New System.Drawing.Size(156, 20)
         Me.txtFileNo.TabIndex = 9
+        Me.txtFileNo.Text = "F3 to search"
         '
         'txtCustomer
         '
@@ -191,7 +192,9 @@ Partial Class Advances
         '
         'cboStatus
         '
+        Me.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboStatus.FormattingEnabled = True
+        Me.cboStatus.Items.AddRange(New Object() {"Bill Printed", "Bill Not Printed"})
         Me.cboStatus.Location = New System.Drawing.Point(376, 35)
         Me.cboStatus.Name = "cboStatus"
         Me.cboStatus.Size = New System.Drawing.Size(121, 21)

@@ -179,6 +179,7 @@ Partial Class MainFW
         Me.btnAdvances.TabIndex = 47
         Me.btnAdvances.Text = "Advances"
         Me.btnAdvances.UseVisualStyleBackColor = True
+        Me.btnAdvances.Visible = False
         '
         'txtDateEncoded
         '

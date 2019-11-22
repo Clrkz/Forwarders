@@ -854,7 +854,6 @@ Liquidated,'" & fileno & "' FROM tempAdvExpenses
 ", mdl.conn)
 
         mdl.adapter.Fill(mdl.ds, "Advances2")
-        MessageBox.Show("Advances successfully added.")
 
         truncate1()
     End Sub
@@ -867,5 +866,8 @@ Liquidated,'" & fileno & "' FROM tempAdvExpenses
             cmd.ExecuteNonQuery()
             conn.Close()
         End Using
+
+        Advances.ClearDetails()
+        MessageBox.Show("Advances successfully added.")
     End Sub
 End Module

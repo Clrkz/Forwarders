@@ -251,6 +251,7 @@ Partial Class History
         Me.Label5.Size = New System.Drawing.Size(52, 13)
         Me.Label5.TabIndex = 60
         Me.Label5.Text = "Code No."
+        Me.Label5.Visible = False
         '
         'Label4
         '
@@ -285,6 +286,7 @@ Partial Class History
         Me.txtCodeNumber.Name = "txtCodeNumber"
         Me.txtCodeNumber.Size = New System.Drawing.Size(100, 20)
         Me.txtCodeNumber.TabIndex = 56
+        Me.txtCodeNumber.Visible = False
         '
         'txtSalesPerson
         '
@@ -313,6 +315,7 @@ Partial Class History
         Me.txtFileNo.Name = "txtFileNo"
         Me.txtFileNo.Size = New System.Drawing.Size(100, 20)
         Me.txtFileNo.TabIndex = 52
+        Me.txtFileNo.Text = "F3 to search"
         '
         'Label1
         '
