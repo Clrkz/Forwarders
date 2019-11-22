@@ -6,6 +6,7 @@ Imports System.IO
 Imports System.Data.SqlClient
 Imports System.Windows.Controls
 
+
 Public Class MDIForwarders
     Dim WithEvents aTimer As New System.Windows.Forms.Timer
     Dim count As Int32
@@ -14,12 +15,13 @@ Public Class MDIForwarders
     Private f As Form
     Public Shared saveFile As Boolean = False
 
-
     'panel.VerticalScroll.Visible = False Or panel.HorizontalScroll.Visible = False
     Private Sub aTimer_Tick(ByVal sender As Object,
                             ByVal e As System.EventArgs) Handles aTimer.Tick
         ToolStripStatusLabel2.Text = DateTime.Now.ToString("MMMM dd, yyyy h:mm:ss tt")
     End Sub
+
+
 
     Private Sub Form1_Shown(ByVal sender As Object,
                             ByVal e As System.EventArgs) Handles Me.Shown
