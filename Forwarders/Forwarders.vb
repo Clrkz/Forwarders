@@ -30,17 +30,12 @@ Public Class MDIForwarders
         ' Create a new instance of the child form.
         ' Dim ChildForm As New System.Windows.Forms.Form
         ' Make it a child of this MDI form before showing it.
-        'ChildForm.MdiParent = Me
-
+        'ChildForm.MdiParent = Me 
         'm_ChildFormNumber += 1
-        'ChildForm.Text = "Window " & m_ChildFormNumber
-
+        'ChildForm.Text = "Window " & m_ChildFormNumber 
         'ChildForm.Show()  
-        'Details.newtran = True
-
-        'CallTreeView()
-
-
+        'Details.newtran = True 
+        'CallTreeView() 
 
     End Sub
 
@@ -598,7 +593,7 @@ Public Class MDIForwarders
             Case "History"
 
             Case "Certificate Of Payment"
-
+                FW.InsertCertificateOfPayment()
             Case "Schedule Of Delivery"
 
             Case "User Settings"
@@ -699,7 +694,10 @@ Public Class MDIForwarders
                     MessageBox.Show("Enter File Number")
                 Else
                     FW.GetAllDataDetails(CertificateOfPayment.txtFileNo.Text)
+                    FW.GetAllCertificateOfpayment(CertificateOfPayment.txtFileNo.Text)
                     CertificateOfPayment.populateToFields()
+                    CertificateOfPayment.populateToFieldsCertidicateOfpayment()
+
                 End If
             Case "Schedule Of Delivery"
                 If ScheduleOfDelivery.txtFileNo.Text = "" Then

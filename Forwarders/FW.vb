@@ -91,6 +91,24 @@ PaymentTimeDate,
 PaymentTime,
 CUDVAT As String
 
+    Public copFileNo,
+CPNo,
+copConsignee,
+Manufacturer,
+Series,
+copClass,
+Color,
+YearModel,
+EngineNo,
+SerialNo,
+EngineDisplacement,
+Examiner,
+DateofDelivery,
+RecievedBy,
+RecievedDate,
+IssuedDate As String
+
+
 
     Public Function App_Path() As String
         App_Path = New System.IO.FileInfo(Application.ExecutablePath).DirectoryName
@@ -618,6 +636,100 @@ VALUES (
 )", mdl.conn)
         mdl.adapter.Fill(mdl.ds, "CustomInfo")
         MessageBox.Show("Custom information successfully added.")
+    End Sub
+
+    Sub InsertCertificateOfPayment()
+        Dim payment As String
+        If CustomInfo.CheckBox12.Checked Then
+            payment = "1"
+        Else
+            payment = "0"
+        End If
+
+        mdl.ds = New DataSet
+        mdl.adapter = New SqlDataAdapter("INSERT INTO CertificateOfPayment (
+FileNo,
+CPNo,
+Consignee,
+Manufacturer,
+Series,
+Class,
+Color,
+YearModel,
+EngineNo,
+SerialNo,
+EngineDisplacement,
+Examiner,
+DateofDelivery,
+RecievedBy,
+RecievedDate,
+IssuedDate
+) 
+VALUES (
+'" & FW.FileNo & "' ,
+'" & CertificateOfPayment.TextBox48.Text.Trim & "' , 
+'" & CertificateOfPayment.TextBox49.Text.Trim & "' , 
+'" & CertificateOfPayment.TextBox50.Text.Trim & "' , 
+'" & CertificateOfPayment.TextBox52.Text.Trim & "' , 
+'" & CertificateOfPayment.TextBox53.Text.Trim & "' , 
+'" & CertificateOfPayment.TextBox54.Text.Trim & "' ,  
+'" & CertificateOfPayment.TextBox55.Text.Trim & "' ,
+'" & CertificateOfPayment.TextBox56.Text.Trim & "' , 
+'" & CertificateOfPayment.TextBox57.Text.Trim & "' , 
+'" & CertificateOfPayment.TextBox58.Text.Trim & "' , 
+'" & CertificateOfPayment.TextBox59.Text.Trim & "' ,  
+'" & CertificateOfPayment.TextBox62.Text.Trim & "' , 
+'" & CertificateOfPayment.TextBox61.Text.Trim & "' ,  
+'" & CertificateOfPayment.TextBox60.Text.Trim & "' , 
+'" & CertificateOfPayment.TextBox51.Text.Trim & "' 
+)", mdl.conn)
+        mdl.adapter.Fill(mdl.ds, "CertificateOfPayment")
+        MessageBox.Show("Certificate of payment successfully added.")
+    End Sub
+
+    Public Sub GetAllCertificateOfpayment(valueToSearch As String)
+        Dim Dataset As New DataSet
+        Dim DataAdapter As New OleDbDataAdapter
+        Dim rs As New ADODB.Recordset
+        rs.CursorLocation = ADODB.CursorLocationEnum.adUseClient
+        rs.CursorType = ADODB.CursorTypeEnum.adOpenStatic
+        rs.LockType = ADODB.LockTypeEnum.adLockBatchOptimistic
+        rs.Open("Select FileNo,
+CPNo,
+Consignee,
+Manufacturer,
+Series,
+Class,
+Color,
+YearModel,
+EngineNo,
+SerialNo,
+EngineDisplacement,
+Examiner,
+DateofDelivery,
+RecievedBy,
+RecievedDate,
+IssuedDate From CertificateOfPayment Where FileNo = '" + valueToSearch.Trim + "'", gs_Conn, 2)
+        If rs.RecordCount = 0 Then
+            ' MessageBox.Show("No record")
+        Else
+            copFileNo = rs.Fields(0).Value.ToString
+            CPNo = rs.Fields(1).Value.ToString
+            copConsignee = rs.Fields(2).Value.ToString
+            Manufacturer = rs.Fields(3).Value.ToString
+            Series = rs.Fields(4).Value.ToString
+            copClass = rs.Fields(5).Value.ToString
+            Color = rs.Fields(6).Value.ToString
+            YearModel = rs.Fields(7).Value.ToString
+            EngineNo = rs.Fields(8).Value.ToString
+            SerialNo = rs.Fields(9).Value.ToString
+            EngineDisplacement = rs.Fields(10).Value.ToString
+            Examiner = rs.Fields(11).Value.ToString
+            DateofDelivery = rs.Fields(12).Value.ToString
+            RecievedBy = rs.Fields(13).Value.ToString
+            RecievedDate = rs.Fields(14).Value.ToString
+            IssuedDate = rs.Fields(15).Value.ToString
+        End If
     End Sub
 
 End Module

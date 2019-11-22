@@ -20,6 +20,25 @@
         TextBox5.Text = FW.ApprovalDate
 
     End Sub
+
+    Public Sub populateToFieldsCertidicateOfpayment()
+        TextBox48.Text = FW.CPNo
+        TextBox49.Text = FW.copConsignee
+        TextBox50.Text = FW.Manufacturer
+        TextBox52.Text = FW.Series
+        TextBox53.Text = FW.copClass
+        TextBox54.Text = FW.Color
+        TextBox55.Text = FW.YearModel
+        TextBox56.Text = FW.EngineNo
+        TextBox57.Text = FW.SerialNo
+        TextBox58.Text = FW.EngineDisplacement
+        TextBox59.Text = FW.Examiner
+        TextBox62.Text = FW.DateofDelivery
+        TextBox61.Text = FW.RecievedBy
+        TextBox60.Text = FW.RecievedDate
+        TextBox51.Text = FW.IssuedDate
+
+    End Sub
     Public Sub ClearDetails()
         txtFileNo.Text = ""
         txtCustomer.Text = ""
@@ -33,6 +52,21 @@
         TextBox3.Text = ""
         TextBox4.Text = ""
         TextBox5.Text = ""
+        TextBox48.Text = ""
+        TextBox49.Text = ""
+        TextBox50.Text = ""
+        TextBox52.Text = ""
+        TextBox53.Text = ""
+        TextBox54.Text = ""
+        TextBox55.Text = ""
+        TextBox56.Text = ""
+        TextBox57.Text = ""
+        TextBox58.Text = ""
+        TextBox59.Text = ""
+        TextBox62.Text = ""
+        TextBox61.Text = ""
+        TextBox60.Text = ""
+        TextBox51.Text = ""
 
     End Sub
 
