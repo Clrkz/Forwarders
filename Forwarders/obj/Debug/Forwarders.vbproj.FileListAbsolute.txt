@@ -212,3 +212,10 @@ F:\software engineering\Sofeng\Forwarders\Forwarders\obj\Debug\Forwarders.Schedu
 F:\software engineering\Sofeng\Forwarders\Forwarders\obj\Debug\Forwarders.SetScreenStatus.resources
 F:\software engineering\Sofeng\Forwarders\Forwarders\obj\Debug\Forwarders.UserPermissions.resources
 F:\software engineering\Sofeng\Forwarders\Forwarders\obj\Debug\Forwarders.vbproj.GenerateResource.Cache
+F:\software engineering\Sofeng\Forwarderss\Forwarders\bin\Debug\Forwarders.exe.config
+F:\software engineering\Sofeng\Forwarderss\Forwarders\obj\Debug\Interop.ADODB.dll
+F:\software engineering\Sofeng\Forwarderss\Forwarders\obj\Debug\Interop.ADOR.dll
+F:\software engineering\Sofeng\Forwarderss\Forwarders\obj\Debug\Forwarders.vbproj.ResolveComReference.cache
+F:\software engineering\Sofeng\Forwarderss\Forwarders\obj\Debug\Forwarders.exe
+F:\software engineering\Sofeng\Forwarderss\Forwarders\obj\Debug\Forwarders.xml
+F:\software engineering\Sofeng\Forwarderss\Forwarders\obj\Debug\Forwarders.pdb
