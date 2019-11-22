@@ -2,6 +2,7 @@
     Private Sub History_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.AutoScroll = True
         cboStatus.SelectedIndex = 0
+        txtDateEncoded.ReadOnly = True
     End Sub
     Private Sub txtFileNo_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtFileNo.GotFocus
         If txtFileNo.Text = "F3 to search" Then

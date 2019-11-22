@@ -78,7 +78,6 @@ Partial Class Details
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
@@ -105,8 +104,6 @@ Partial Class Details
         Me.Label17 = New System.Windows.Forms.Label()
         Me.txtBroker = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.txtEDA = New System.Windows.Forms.TextBox()
-        Me.txtETA = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -115,10 +112,7 @@ Partial Class Details
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnInvoice = New System.Windows.Forms.Button()
@@ -140,6 +134,12 @@ Partial Class Details
         Me.txtCustomer = New System.Windows.Forms.TextBox()
         Me.txtFileNo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox5 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox2 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox13 = New System.Windows.Forms.DateTimePicker()
+        Me.txtETA = New System.Windows.Forms.DateTimePicker()
+        Me.txtEDA = New System.Windows.Forms.DateTimePicker()
         Me.Panel6.SuspendLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -626,13 +626,6 @@ Partial Class Details
         Me.Panel4.Size = New System.Drawing.Size(556, 53)
         Me.Panel4.TabIndex = 0
         '
-        'TextBox13
-        '
-        Me.TextBox13.Location = New System.Drawing.Point(141, 21)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox13.TabIndex = 47
-        '
         'Label27
         '
         Me.Label27.AutoSize = True
@@ -869,20 +862,6 @@ Partial Class Details
         Me.Label16.TabIndex = 47
         Me.Label16.Text = "Broker"
         '
-        'txtEDA
-        '
-        Me.txtEDA.Location = New System.Drawing.Point(510, 203)
-        Me.txtEDA.Name = "txtEDA"
-        Me.txtEDA.Size = New System.Drawing.Size(100, 20)
-        Me.txtEDA.TabIndex = 46
-        '
-        'txtETA
-        '
-        Me.txtETA.Location = New System.Drawing.Point(370, 203)
-        Me.txtETA.Name = "txtETA"
-        Me.txtETA.Size = New System.Drawing.Size(100, 20)
-        Me.txtETA.TabIndex = 45
-        '
         'Label15
         '
         Me.Label15.AutoSize = True
@@ -915,14 +894,14 @@ Partial Class Details
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.TextBox5)
+        Me.Panel1.Controls.Add(Me.TextBox4)
         Me.Panel1.Controls.Add(Me.Label13)
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.Label10)
-        Me.Panel1.Controls.Add(Me.TextBox5)
-        Me.Panel1.Controls.Add(Me.TextBox4)
         Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Location = New System.Drawing.Point(449, 98)
@@ -966,33 +945,12 @@ Partial Class Details
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "Received Date"
         '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(346, 29)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 5
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(346, 3)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 4
-        '
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(93, 55)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(353, 20)
         Me.TextBox3.TabIndex = 3
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(93, 29)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 2
         '
         'Label9
         '
@@ -1173,11 +1131,61 @@ Partial Class Details
         Me.Label1.TabIndex = 84
         Me.Label1.Text = "File No."
         '
+        'TextBox4
+        '
+        Me.TextBox4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox4.Location = New System.Drawing.Point(346, 6)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 104
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox5.Location = New System.Drawing.Point(346, 32)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox5.TabIndex = 105
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox2.Location = New System.Drawing.Point(93, 29)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 106
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox13.Location = New System.Drawing.Point(138, 21)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox13.TabIndex = 106
+        '
+        'txtETA
+        '
+        Me.txtETA.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.txtETA.Location = New System.Drawing.Point(370, 203)
+        Me.txtETA.Name = "txtETA"
+        Me.txtETA.Size = New System.Drawing.Size(100, 20)
+        Me.txtETA.TabIndex = 107
+        '
+        'txtEDA
+        '
+        Me.txtEDA.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.txtEDA.Location = New System.Drawing.Point(511, 203)
+        Me.txtEDA.Name = "txtEDA"
+        Me.txtEDA.Size = New System.Drawing.Size(100, 20)
+        Me.txtEDA.TabIndex = 108
+        '
         'Details
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1021, 692)
+        Me.Controls.Add(Me.txtEDA)
+        Me.Controls.Add(Me.txtETA)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnInvoice)
         Me.Controls.Add(Me.btnDR)
@@ -1235,8 +1243,6 @@ Partial Class Details
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.txtBroker)
         Me.Controls.Add(Me.Label16)
-        Me.Controls.Add(Me.txtEDA)
-        Me.Controls.Add(Me.txtETA)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.DataGridView1)
@@ -1336,8 +1342,6 @@ Partial Class Details
     Friend WithEvents Label17 As Label
     Friend WithEvents txtBroker As TextBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents txtEDA As TextBox
-    Friend WithEvents txtETA As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents DataGridView1 As DataGridView
@@ -1346,10 +1350,7 @@ Partial Class Details
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents btnInvoice As Button
@@ -1371,5 +1372,10 @@ Partial Class Details
     Friend WithEvents txtCustomer As TextBox
     Friend WithEvents txtFileNo As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents TextBox2 As DateTimePicker
+    Friend WithEvents TextBox5 As DateTimePicker
+    Friend WithEvents TextBox4 As DateTimePicker
+    Friend WithEvents TextBox13 As DateTimePicker
+    Friend WithEvents txtETA As DateTimePicker
+    Friend WithEvents txtEDA As DateTimePicker
 End Class

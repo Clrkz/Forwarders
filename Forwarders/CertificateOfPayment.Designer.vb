@@ -23,16 +23,13 @@ Partial Class CertificateOfPayment
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label69 = New System.Windows.Forms.Label()
-        Me.TextBox51 = New System.Windows.Forms.TextBox()
         Me.TextBox50 = New System.Windows.Forms.TextBox()
         Me.TextBox49 = New System.Windows.Forms.TextBox()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label80 = New System.Windows.Forms.Label()
         Me.Label79 = New System.Windows.Forms.Label()
         Me.Label78 = New System.Windows.Forms.Label()
-        Me.TextBox62 = New System.Windows.Forms.TextBox()
         Me.TextBox61 = New System.Windows.Forms.TextBox()
-        Me.TextBox60 = New System.Windows.Forms.TextBox()
         Me.Label77 = New System.Windows.Forms.Label()
         Me.Label76 = New System.Windows.Forms.Label()
         Me.Label75 = New System.Windows.Forms.Label()
@@ -59,10 +56,7 @@ Partial Class CertificateOfPayment
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnInvoice = New System.Windows.Forms.Button()
@@ -84,6 +78,12 @@ Partial Class CertificateOfPayment
         Me.txtFileNo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboStatus = New System.Windows.Forms.ComboBox()
+        Me.TextBox2 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox5 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox4 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox51 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox62 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox60 = New System.Windows.Forms.DateTimePicker()
         Me.Panel10.SuspendLayout()
         CType(Me.DataGridView7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -97,13 +97,6 @@ Partial Class CertificateOfPayment
         Me.Label69.Size = New System.Drawing.Size(64, 13)
         Me.Label69.TabIndex = 13
         Me.Label69.Text = "Issued Date"
-        '
-        'TextBox51
-        '
-        Me.TextBox51.Location = New System.Drawing.Point(670, 219)
-        Me.TextBox51.Name = "TextBox51"
-        Me.TextBox51.Size = New System.Drawing.Size(156, 20)
-        Me.TextBox51.TabIndex = 12
         '
         'TextBox50
         '
@@ -122,12 +115,13 @@ Partial Class CertificateOfPayment
         'Panel10
         '
         Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel10.Controls.Add(Me.TextBox60)
+        Me.Panel10.Controls.Add(Me.TextBox62)
+        Me.Panel10.Controls.Add(Me.TextBox51)
         Me.Panel10.Controls.Add(Me.Label80)
         Me.Panel10.Controls.Add(Me.Label79)
         Me.Panel10.Controls.Add(Me.Label78)
-        Me.Panel10.Controls.Add(Me.TextBox62)
         Me.Panel10.Controls.Add(Me.TextBox61)
-        Me.Panel10.Controls.Add(Me.TextBox60)
         Me.Panel10.Controls.Add(Me.Label77)
         Me.Panel10.Controls.Add(Me.Label76)
         Me.Panel10.Controls.Add(Me.Label75)
@@ -181,26 +175,12 @@ Partial Class CertificateOfPayment
         Me.Label78.TabIndex = 27
         Me.Label78.Text = "Date of Delivery"
         '
-        'TextBox62
-        '
-        Me.TextBox62.Location = New System.Drawing.Point(291, 362)
-        Me.TextBox62.Name = "TextBox62"
-        Me.TextBox62.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox62.TabIndex = 26
-        '
         'TextBox61
         '
         Me.TextBox61.Location = New System.Drawing.Point(291, 388)
         Me.TextBox61.Name = "TextBox61"
         Me.TextBox61.Size = New System.Drawing.Size(421, 20)
         Me.TextBox61.TabIndex = 25
-        '
-        'TextBox60
-        '
-        Me.TextBox60.Location = New System.Drawing.Point(291, 414)
-        Me.TextBox60.Name = "TextBox60"
-        Me.TextBox60.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox60.TabIndex = 24
         '
         'Label77
         '
@@ -375,14 +355,14 @@ Partial Class CertificateOfPayment
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.TextBox5)
+        Me.Panel1.Controls.Add(Me.TextBox4)
         Me.Panel1.Controls.Add(Me.Label13)
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.Label10)
-        Me.Panel1.Controls.Add(Me.TextBox5)
-        Me.Panel1.Controls.Add(Me.TextBox4)
         Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Location = New System.Drawing.Point(437, 98)
@@ -426,33 +406,12 @@ Partial Class CertificateOfPayment
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "Received Date"
         '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(346, 29)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 5
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(346, 3)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 4
-        '
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(93, 55)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(353, 20)
         Me.TextBox3.TabIndex = 3
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(93, 29)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 2
         '
         'Label9
         '
@@ -625,13 +584,61 @@ Partial Class CertificateOfPayment
         '
         'cboStatus
         '
-        Me.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboStatus.Enabled = False
         Me.cboStatus.FormattingEnabled = True
         Me.cboStatus.Items.AddRange(New Object() {"Pending", "Approve", "On Transit"})
         Me.cboStatus.Location = New System.Drawing.Point(519, 12)
         Me.cboStatus.Name = "cboStatus"
         Me.cboStatus.Size = New System.Drawing.Size(121, 21)
         Me.cboStatus.TabIndex = 97
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox2.Location = New System.Drawing.Point(93, 29)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 112
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox5.Location = New System.Drawing.Point(346, 32)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox5.TabIndex = 111
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox4.Location = New System.Drawing.Point(346, 6)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 110
+        '
+        'TextBox51
+        '
+        Me.TextBox51.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox51.Location = New System.Drawing.Point(647, 16)
+        Me.TextBox51.Name = "TextBox51"
+        Me.TextBox51.Size = New System.Drawing.Size(156, 20)
+        Me.TextBox51.TabIndex = 113
+        '
+        'TextBox62
+        '
+        Me.TextBox62.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox62.Location = New System.Drawing.Point(291, 362)
+        Me.TextBox62.Name = "TextBox62"
+        Me.TextBox62.Size = New System.Drawing.Size(156, 20)
+        Me.TextBox62.TabIndex = 114
+        '
+        'TextBox60
+        '
+        Me.TextBox60.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox60.Location = New System.Drawing.Point(291, 414)
+        Me.TextBox60.Name = "TextBox60"
+        Me.TextBox60.Size = New System.Drawing.Size(156, 20)
+        Me.TextBox60.TabIndex = 115
         '
         'CertificateOfPayment
         '
@@ -659,7 +666,6 @@ Partial Class CertificateOfPayment
         Me.Controls.Add(Me.txtFileNo)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label69)
-        Me.Controls.Add(Me.TextBox51)
         Me.Controls.Add(Me.TextBox50)
         Me.Controls.Add(Me.TextBox49)
         Me.Controls.Add(Me.Panel10)
@@ -677,16 +683,13 @@ Partial Class CertificateOfPayment
     End Sub
 
     Friend WithEvents Label69 As Label
-    Friend WithEvents TextBox51 As TextBox
     Friend WithEvents TextBox50 As TextBox
     Friend WithEvents TextBox49 As TextBox
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Label80 As Label
     Friend WithEvents Label79 As Label
     Friend WithEvents Label78 As Label
-    Friend WithEvents TextBox62 As TextBox
     Friend WithEvents TextBox61 As TextBox
-    Friend WithEvents TextBox60 As TextBox
     Friend WithEvents Label77 As Label
     Friend WithEvents Label76 As Label
     Friend WithEvents Label75 As Label
@@ -713,10 +716,7 @@ Partial Class CertificateOfPayment
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents btnInvoice As Button
@@ -738,4 +738,10 @@ Partial Class CertificateOfPayment
     Friend WithEvents txtFileNo As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents cboStatus As ComboBox
+    Friend WithEvents TextBox51 As DateTimePicker
+    Friend WithEvents TextBox2 As DateTimePicker
+    Friend WithEvents TextBox5 As DateTimePicker
+    Friend WithEvents TextBox4 As DateTimePicker
+    Friend WithEvents TextBox60 As DateTimePicker
+    Friend WithEvents TextBox62 As DateTimePicker
 End Class

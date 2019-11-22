@@ -22,6 +22,7 @@ Partial Class CustomInfo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -31,11 +32,8 @@ Partial Class CustomInfo
         Me.Label65 = New System.Windows.Forms.Label()
         Me.Label64 = New System.Windows.Forms.Label()
         Me.TextBox44 = New System.Windows.Forms.TextBox()
-        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
         Me.CheckBox12 = New System.Windows.Forms.CheckBox()
-        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
         Me.TextBox43 = New System.Windows.Forms.TextBox()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.TextBox42 = New System.Windows.Forms.TextBox()
         Me.Label63 = New System.Windows.Forms.Label()
         Me.Label62 = New System.Windows.Forms.Label()
@@ -44,12 +42,8 @@ Partial Class CustomInfo
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label59 = New System.Windows.Forms.Label()
         Me.Label58 = New System.Windows.Forms.Label()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label57 = New System.Windows.Forms.Label()
         Me.Label56 = New System.Windows.Forms.Label()
         Me.Label55 = New System.Windows.Forms.Label()
@@ -79,10 +73,7 @@ Partial Class CustomInfo
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnInvoice = New System.Windows.Forms.Button()
@@ -104,6 +95,17 @@ Partial Class CustomInfo
         Me.txtFileNo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboStatus = New System.Windows.Forms.ComboBox()
+        Me.TextBox2 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox5 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox4 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox3 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox2 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox1 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox4 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox5 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox6 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox7 = New System.Windows.Forms.DateTimePicker()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel7.SuspendLayout()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
@@ -157,17 +159,17 @@ Partial Class CustomInfo
         'Panel9
         '
         Me.Panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel9.Controls.Add(Me.ComboBox7)
+        Me.Panel9.Controls.Add(Me.ComboBox6)
+        Me.Panel9.Controls.Add(Me.ComboBox5)
         Me.Panel9.Controls.Add(Me.TextBox47)
         Me.Panel9.Controls.Add(Me.TextBox46)
         Me.Panel9.Controls.Add(Me.TextBox45)
         Me.Panel9.Controls.Add(Me.Label65)
         Me.Panel9.Controls.Add(Me.Label64)
         Me.Panel9.Controls.Add(Me.TextBox44)
-        Me.Panel9.Controls.Add(Me.ComboBox7)
         Me.Panel9.Controls.Add(Me.CheckBox12)
-        Me.Panel9.Controls.Add(Me.ComboBox6)
         Me.Panel9.Controls.Add(Me.TextBox43)
-        Me.Panel9.Controls.Add(Me.ComboBox5)
         Me.Panel9.Controls.Add(Me.TextBox42)
         Me.Panel9.Controls.Add(Me.Label63)
         Me.Panel9.Controls.Add(Me.Label62)
@@ -180,21 +182,21 @@ Partial Class CustomInfo
         '
         'TextBox47
         '
-        Me.TextBox47.Location = New System.Drawing.Point(190, 145)
+        Me.TextBox47.Location = New System.Drawing.Point(190, 143)
         Me.TextBox47.Name = "TextBox47"
         Me.TextBox47.Size = New System.Drawing.Size(75, 20)
         Me.TextBox47.TabIndex = 15
         '
         'TextBox46
         '
-        Me.TextBox46.Location = New System.Drawing.Point(190, 100)
+        Me.TextBox46.Location = New System.Drawing.Point(190, 99)
         Me.TextBox46.Name = "TextBox46"
         Me.TextBox46.Size = New System.Drawing.Size(75, 20)
         Me.TextBox46.TabIndex = 14
         '
         'TextBox45
         '
-        Me.TextBox45.Location = New System.Drawing.Point(190, 46)
+        Me.TextBox45.Location = New System.Drawing.Point(191, 45)
         Me.TextBox45.Name = "TextBox45"
         Me.TextBox45.Size = New System.Drawing.Size(75, 20)
         Me.TextBox45.TabIndex = 13
@@ -224,14 +226,6 @@ Partial Class CustomInfo
         Me.TextBox44.Size = New System.Drawing.Size(119, 20)
         Me.TextBox44.TabIndex = 10
         '
-        'ComboBox7
-        '
-        Me.ComboBox7.FormattingEnabled = True
-        Me.ComboBox7.Location = New System.Drawing.Point(81, 143)
-        Me.ComboBox7.Name = "ComboBox7"
-        Me.ComboBox7.Size = New System.Drawing.Size(104, 21)
-        Me.ComboBox7.TabIndex = 9
-        '
         'CheckBox12
         '
         Me.CheckBox12.AutoSize = True
@@ -242,28 +236,12 @@ Partial Class CustomInfo
         Me.CheckBox12.Text = "Payment"
         Me.CheckBox12.UseVisualStyleBackColor = True
         '
-        'ComboBox6
-        '
-        Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Location = New System.Drawing.Point(81, 98)
-        Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(104, 21)
-        Me.ComboBox6.TabIndex = 7
-        '
         'TextBox43
         '
         Me.TextBox43.Location = New System.Drawing.Point(81, 72)
         Me.TextBox43.Name = "TextBox43"
         Me.TextBox43.Size = New System.Drawing.Size(119, 20)
         Me.TextBox43.TabIndex = 6
-        '
-        'ComboBox5
-        '
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(81, 44)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(104, 21)
-        Me.ComboBox5.TabIndex = 5
         '
         'TextBox42
         '
@@ -311,14 +289,14 @@ Partial Class CustomInfo
         'Panel8
         '
         Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel8.Controls.Add(Me.Label14)
-        Me.Panel8.Controls.Add(Me.Label15)
+        Me.Panel8.Controls.Add(Me.ComboBox4)
         Me.Panel8.Controls.Add(Me.ComboBox1)
         Me.Panel8.Controls.Add(Me.ComboBox2)
+        Me.Panel8.Controls.Add(Me.ComboBox3)
+        Me.Panel8.Controls.Add(Me.Label14)
+        Me.Panel8.Controls.Add(Me.Label15)
         Me.Panel8.Controls.Add(Me.Label59)
         Me.Panel8.Controls.Add(Me.Label58)
-        Me.Panel8.Controls.Add(Me.ComboBox4)
-        Me.Panel8.Controls.Add(Me.ComboBox3)
         Me.Panel8.Location = New System.Drawing.Point(300, 84)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(260, 125)
@@ -342,22 +320,6 @@ Partial Class CustomInfo
         Me.Label15.TabIndex = 29
         Me.Label15.Text = "Demurrage End"
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(114, 89)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 28
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(114, 61)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 27
-        '
         'Label59
         '
         Me.Label59.AutoSize = True
@@ -375,22 +337,6 @@ Partial Class CustomInfo
         Me.Label58.Size = New System.Drawing.Size(74, 13)
         Me.Label58.TabIndex = 25
         Me.Label58.Text = "Storage Begin"
-        '
-        'ComboBox4
-        '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(114, 31)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox4.TabIndex = 1
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(114, 3)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox3.TabIndex = 0
         '
         'Label57
         '
@@ -589,14 +535,14 @@ Partial Class CustomInfo
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.TextBox5)
+        Me.Panel1.Controls.Add(Me.TextBox4)
         Me.Panel1.Controls.Add(Me.Label13)
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.Label10)
-        Me.Panel1.Controls.Add(Me.TextBox5)
-        Me.Panel1.Controls.Add(Me.TextBox4)
         Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Location = New System.Drawing.Point(452, 98)
@@ -640,33 +586,12 @@ Partial Class CustomInfo
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "Received Date"
         '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(346, 29)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 5
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(346, 3)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 4
-        '
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(93, 55)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(353, 20)
         Me.TextBox3.TabIndex = 3
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(93, 29)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 2
         '
         'Label9
         '
@@ -839,13 +764,93 @@ Partial Class CustomInfo
         '
         'cboStatus
         '
-        Me.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboStatus.Enabled = False
         Me.cboStatus.FormattingEnabled = True
         Me.cboStatus.Items.AddRange(New Object() {"Pending", "Approve", "On Transit"})
         Me.cboStatus.Location = New System.Drawing.Point(535, 12)
         Me.cboStatus.Name = "cboStatus"
         Me.cboStatus.Size = New System.Drawing.Size(121, 21)
         Me.cboStatus.TabIndex = 97
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox2.Location = New System.Drawing.Point(93, 29)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 109
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox5.Location = New System.Drawing.Point(346, 32)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox5.TabIndex = 108
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox4.Location = New System.Drawing.Point(346, 6)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 107
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ComboBox3.Location = New System.Drawing.Point(114, 6)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(121, 20)
+        Me.ComboBox3.TabIndex = 110
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ComboBox2.Location = New System.Drawing.Point(114, 63)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 20)
+        Me.ComboBox2.TabIndex = 111
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ComboBox1.Location = New System.Drawing.Point(114, 89)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 20)
+        Me.ComboBox1.TabIndex = 112
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ComboBox4.Location = New System.Drawing.Point(114, 32)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(121, 20)
+        Me.ComboBox4.TabIndex = 113
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ComboBox5.Location = New System.Drawing.Point(81, 46)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(104, 20)
+        Me.ComboBox5.TabIndex = 114
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ComboBox6.Location = New System.Drawing.Point(80, 98)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(104, 20)
+        Me.ComboBox6.TabIndex = 115
+        '
+        'ComboBox7
+        '
+        Me.ComboBox7.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ComboBox7.Location = New System.Drawing.Point(80, 142)
+        Me.ComboBox7.Name = "ComboBox7"
+        Me.ComboBox7.Size = New System.Drawing.Size(104, 20)
+        Me.ComboBox7.TabIndex = 116
         '
         'CustomInfo
         '
@@ -900,11 +905,8 @@ Partial Class CustomInfo
     Friend WithEvents Label65 As Label
     Friend WithEvents Label64 As Label
     Friend WithEvents TextBox44 As TextBox
-    Friend WithEvents ComboBox7 As ComboBox
     Friend WithEvents CheckBox12 As CheckBox
-    Friend WithEvents ComboBox6 As ComboBox
     Friend WithEvents TextBox43 As TextBox
-    Friend WithEvents ComboBox5 As ComboBox
     Friend WithEvents TextBox42 As TextBox
     Friend WithEvents Label63 As Label
     Friend WithEvents Label62 As Label
@@ -913,8 +915,6 @@ Partial Class CustomInfo
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Label59 As Label
     Friend WithEvents Label58 As Label
-    Friend WithEvents ComboBox4 As ComboBox
-    Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents Label57 As Label
     Friend WithEvents Label56 As Label
     Friend WithEvents Label55 As Label
@@ -944,10 +944,7 @@ Partial Class CustomInfo
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents btnInvoice As Button
@@ -971,6 +968,15 @@ Partial Class CustomInfo
     Friend WithEvents cboStatus As ComboBox
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox4 As DateTimePicker
+    Friend WithEvents ComboBox1 As DateTimePicker
+    Friend WithEvents ComboBox2 As DateTimePicker
+    Friend WithEvents ComboBox3 As DateTimePicker
+    Friend WithEvents TextBox2 As DateTimePicker
+    Friend WithEvents TextBox5 As DateTimePicker
+    Friend WithEvents TextBox4 As DateTimePicker
+    Friend WithEvents ComboBox7 As DateTimePicker
+    Friend WithEvents ComboBox6 As DateTimePicker
+    Friend WithEvents ComboBox5 As DateTimePicker
+    Friend WithEvents Timer1 As Timer
 End Class

@@ -1,7 +1,12 @@
 ﻿Public Class CustomInfo
     Private Sub CustomInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.AutoScroll = True
-        cboStatus.SelectedIndex = 0
+        'cboStatus.SelectedIndex = 0
+        txtDateEncoded.ReadOnly = True
+        Timer1.Start()
+        TextBox45.Text = TimeOfDay.ToString("hh:mm:ss")
+        TextBox46.Text = TimeOfDay.ToString("hh:mm:ss")
+        TextBox47.Text = TimeOfDay.ToString("hh:mm:ss")
     End Sub
     Private Sub txtFileNo_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtFileNo.GotFocus
         If txtFileNo.Text = "F3 to search" Then
@@ -79,7 +84,7 @@
 
     End Sub
 
-    Private Sub ComboBox6_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox6.SelectedIndexChanged
+    Private Sub ComboBox6_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
     Public Sub populateToFieldsCustomInfo()
@@ -115,4 +120,15 @@
         TextBox44.Text = FW.CUDVAT
     End Sub
 
+    Private Sub ComboBox5_ValueChanged(sender As Object, e As EventArgs) Handles ComboBox5.ValueChanged
+        TextBox45.Text = TimeOfDay.ToString("hh:mm:ss")
+    End Sub
+
+    Private Sub ComboBox6_ValueChanged(sender As Object, e As EventArgs) Handles ComboBox6.ValueChanged
+        TextBox46.Text = TimeOfDay.ToString("hh:mm:ss")
+    End Sub
+
+    Private Sub ComboBox7_ValueChanged(sender As Object, e As EventArgs) Handles ComboBox7.ValueChanged
+        TextBox47.Text = TimeOfDay.ToString("hh:mm:ss")
+    End Sub
 End Class
