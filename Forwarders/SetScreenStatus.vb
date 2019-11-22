@@ -110,10 +110,11 @@ Public Class SetScreenStatus
 
         rs.Open("SELECT userid, password, firstname, middlename, lastname FROM TempUsers", gs_Conn, 3)
         userid = rs.Fields("userid").Value
-        password = rs.Fields("password").Value
+        password = Security.GetHash(rs.Fields("password").Value)
         firstname = rs.Fields("firstname").Value
         middlename = rs.Fields("middlename").Value
         lastname = rs.Fields("lastname").Value
+
 
         'MsgBox(userid)
 
@@ -121,8 +122,8 @@ Public Class SetScreenStatus
 
         mdl.ds = New DataSet
         mdl.adapter = New SqlDataAdapter("INSERT INTO Users (userid, firstname, middlename, lastname, password) 
-VALUES ('" & userid & "' , '" & password & "', '" & firstname & "', '" &
-middlename & "', '" & lastname & "')", mdl.conn)
+VALUES ('" & userid & "' ,  '" & firstname & "', '" &
+middlename & "', '" & lastname & "','" & password & "')", mdl.conn)
 
         mdl.adapter.Fill(mdl.ds, "Users")
 

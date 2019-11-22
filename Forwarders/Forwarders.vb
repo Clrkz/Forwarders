@@ -12,6 +12,8 @@ Public Class MDIForwarders
     Dim arr(7) As String
     Dim but(7) As String
     Private f As Form
+    Public Shared saveFile As Boolean = False
+
 
     'panel.VerticalScroll.Visible = False Or panel.HorizontalScroll.Visible = False
     Private Sub aTimer_Tick(ByVal sender As Object,
@@ -577,35 +579,39 @@ Public Class MDIForwarders
 
 
     Sub SaveData()
-        Dim node As TreeNode
-        node = TreeView1.SelectedNode
-        Select Case node.Text
-            Case "Advances"
+        If saveFile Then
+            Dim node As TreeNode
+            node = TreeView1.SelectedNode
+            Select Case node.Text
+                Case "Advances"
 
-            Case "Liquidation"
+                Case "Liquidation"
 
-            Case "Main"
+                Case "Main"
 
-            Case "Details"
-                FW.InsertDetails()
-            Case "Custom Info"
-                FW.InsertCustomInfo()
-            Case "History"
+                Case "Details"
+                    FW.InsertDetails()
+                Case "Custom Info"
+                    FW.InsertCustomInfo()
+                Case "History"
 
-            Case "Certificate Of Payment"
-                FW.InsertCertificateOfPayment()
-            Case "Schedule Of Delivery"
+                Case "Certificate Of Payment"
+                    FW.InsertCertificateOfPayment()
+                Case "Schedule Of Delivery"
 
-            Case "User Settings"
+                Case "User Settings"
 
-            Case "Billing"
+                Case "Billing"
 
-        End Select
+            End Select
+            saveFile = False
+        End If
+
     End Sub
 
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
-
+        saveFile = False
 
         Dim node As TreeNode
         node = TreeView1.SelectedNode
@@ -714,7 +720,7 @@ Public Class MDIForwarders
     End Sub
 
     Sub NewData()
-
+        saveFile = True
         Dim node As TreeNode
         node = TreeView1.SelectedNode
         Select Case node.Text
