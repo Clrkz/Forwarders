@@ -176,7 +176,6 @@ Public Class Details
         txtDescription.Text = FW.Description
         txtCodeNumber.Text = FW.ControlNo
         cboStatus.Text = FW.Status
-
         txtDateEncoded.Text = FW.DateEncoded
         TextBox1.Text = FW.CAS
         TextBox2.Text = FW.ReceivedDate
