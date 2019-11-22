@@ -42,6 +42,10 @@ Partial Class CustomInfo
         Me.Label61 = New System.Windows.Forms.Label()
         Me.Label60 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label59 = New System.Windows.Forms.Label()
         Me.Label58 = New System.Windows.Forms.Label()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
@@ -100,10 +104,6 @@ Partial Class CustomInfo
         Me.txtFileNo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboStatus = New System.Windows.Forms.ComboBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Panel7.SuspendLayout()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
@@ -323,6 +323,40 @@ Partial Class CustomInfo
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(260, 125)
         Me.Panel8.TabIndex = 24
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(12, 67)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(89, 13)
+        Me.Label14.TabIndex = 30
+        Me.Label14.Text = "Demurrage Begin"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(12, 92)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(81, 13)
+        Me.Label15.TabIndex = 29
+        Me.Label15.Text = "Demurrage End"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(114, 89)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 28
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(114, 61)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox2.TabIndex = 27
         '
         'Label59
         '
@@ -810,40 +844,6 @@ Partial Class CustomInfo
         Me.cboStatus.Size = New System.Drawing.Size(121, 21)
         Me.cboStatus.TabIndex = 97
         '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(12, 67)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(89, 13)
-        Me.Label14.TabIndex = 30
-        Me.Label14.Text = "Demurrage Begin"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(12, 92)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(81, 13)
-        Me.Label15.TabIndex = 29
-        Me.Label15.Text = "Demurrage End"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(114, 89)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 28
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(114, 61)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 27
-        '
         'CustomInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -873,7 +873,7 @@ Partial Class CustomInfo
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "CustomInfo"
         Me.ShowInTaskbar = False
-        Me.Text = "CustomInfo"
+        Me.Text = "q"
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()

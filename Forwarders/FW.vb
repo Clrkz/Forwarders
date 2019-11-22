@@ -445,6 +445,101 @@ LCBank  From Details Where FileNo = '" + valueToSearch.Trim + "'", gs_Conn, 2)
         'Details.txtCosignee.Text = CStr(rs.Rows(0)("Consignee"))
     End Sub
 
+
+
+    Public Sub GetAllCustomInfo(valueToSearch As String)
+        Dim Dataset As New DataSet
+        Dim DataAdapter As New OleDbDataAdapter
+        Dim rs As New ADODB.Recordset
+        rs.CursorLocation = ADODB.CursorLocationEnum.adUseClient
+        rs.CursorType = ADODB.CursorTypeEnum.adOpenStatic
+        rs.LockType = ADODB.LockTypeEnum.adLockBatchOptimistic
+        rs.Open("Select FileNo,
+OfficeCode,
+CECode,
+CountryofOrigin,
+TermsofDelievery,
+Currency,
+ExchangeRate,
+TotalCustomsValue,
+PickupLocation,
+LocationofGoods,
+PortofLoading,
+PortofDischarge,
+StorageBegin,
+StorageEnd,
+DemurrageBegin,
+DemurrageEnd,
+CBM,
+EntryNo,
+TimeSendDate,
+TimeSendTime,
+Selectivity,
+FinalAssessDate,
+FinalAssessTime,
+Payment,
+PaymentTimeDate,
+PaymentTime,
+CUDVAT From CustomInfo Where FileNo = '" + valueToSearch.Trim + "'", gs_Conn, 2)
+        If rs.RecordCount = 0 Then
+            MessageBox.Show("No record")
+        Else
+            FileNo = rs.Fields(0).Value.ToString
+            Customer = rs.Fields(1).Value.ToString
+            Consignee = rs.Fields(2).Value.ToString
+            SalesPerson = rs.Fields(3).Value.ToString
+            Description = rs.Fields(4).Value.ToString
+            ControlNo = rs.Fields(5).Value.ToString
+            Status = rs.Fields(6).Value.ToString
+            DateEncoded = rs.Fields(7).Value.ToString
+            CAS = rs.Fields(8).Value.ToString
+            ReceivedDate = rs.Fields(9).Value.ToString
+            ReceivedBy = rs.Fields(10).Value.ToString
+            ExpirationDate = rs.Fields(11).Value.ToString
+            ApprovalDate = rs.Fields(12).Value.ToString
+            ETA = rs.Fields(13).Value.ToString
+            EDA = rs.Fields(14).Value.ToString
+            Broker = rs.Fields(15).Value.ToString
+            SupplierName = rs.Fields(16).Value.ToString
+            SupplierAddress = rs.Fields(17).Value.ToString
+            SupplierInfo = rs.Fields(18).Value.ToString
+            ShippingLine = rs.Fields(19).Value.ToString
+            Pier = rs.Fields(20).Value.ToString
+            RegNo = rs.Fields(21).Value.ToString
+            Vessel = rs.Fields(22).Value.ToString
+            BillOfLading = rs.Fields(23).Value.ToString
+            Forwarder1 = rs.Fields(24).Value.ToString
+            Forwarder2 = rs.Fields(25).Value.ToString
+            ContactPerson = rs.Fields(26).Value.ToString
+            Warehouse = rs.Fields(27).Value.ToString
+            TelNos = rs.Fields(28).Value.ToString
+            FAX = rs.Fields(29).Value.ToString
+            ContainerSize = rs.Fields(30).Value.ToString
+            ContainerQty = rs.Fields(31).Value.ToString
+            ContainerDescription = rs.Fields(32).Value.ToString
+            TotalContainer = rs.Fields(33).Value.ToString
+            UOM = rs.Fields(34).Value.ToString
+            ContainerDeposit = rs.Fields(35).Value.ToString
+            TotalRefund = rs.Fields(36).Value.ToString
+            PaymentType = rs.Fields(37).Value.ToString
+            RemoveStatus = rs.Fields(38).Value.ToString
+            Regular = rs.Fields(39).Value.ToString
+            Priority = rs.Fields(40).Value.ToString
+            LackOfDoc = rs.Fields(41).Value.ToString
+            AirWayBill = rs.Fields(42).Value.ToString
+            SelfFunded = rs.Fields(43).Value.ToString
+            LC = rs.Fields(44).Value.ToString
+            FCL = rs.Fields(45).Value.ToString
+            LCL = rs.Fields(46).Value.ToString
+            Manifest = rs.Fields(47).Value.ToString
+            Telex = rs.Fields(48).Value.ToString
+            OBL = rs.Fields(49).Value.ToString
+            LCDate = rs.Fields(50).Value.ToString
+            LCBank = rs.Fields(51).Value.ToString
+            DataAdapter.Fill(Dataset, rs, "CustomInfo")
+        End If
+    End Sub
+
     Public Sub InsertCustomInfo()
         Dim payment As String
         If CustomInfo.CheckBox12.Checked Then

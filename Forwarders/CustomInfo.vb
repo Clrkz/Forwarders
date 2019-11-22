@@ -33,7 +33,32 @@
         TextBox3.Text = ""
         TextBox4.Text = ""
         TextBox5.Text = ""
-
+        TextBox30.Text = ""
+        TextBox31.Text = ""
+        TextBox32.Text = ""
+        TextBox33.Text = ""
+        TextBox34.Text = ""
+        TextBox35.Text = ""
+        TextBox36.Text = ""
+        TextBox37.Text = ""
+        TextBox38.Text = ""
+        TextBox39.Text = ""
+        TextBox40.Text = ""
+        ComboBox3.Text = ""
+        ComboBox4.Text = ""
+        ComboBox2.Text = ""
+        ComboBox1.Text = ""
+        TextBox41.Text = ""
+        TextBox42.Text = ""
+        ComboBox5.Text = ""
+        TextBox45.Text = ""
+        TextBox43.Text = ""
+        ComboBox6.Text = ""
+        TextBox46.Text = ""
+        CheckBox12.Checked = False
+        ComboBox7.Text = ""
+        TextBox47.Text = ""
+        TextBox44.Text = ""
     End Sub
 
     Private Sub Panel8_Paint(sender As Object, e As PaintEventArgs) Handles Panel8.Paint
