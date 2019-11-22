@@ -12,6 +12,8 @@ Public Class MDIForwarders
     Dim arr(7) As String
     Dim but(7) As String
     Private f As Form
+    Public Shared saveFile As Boolean = False
+
 
     'panel.VerticalScroll.Visible = False Or panel.HorizontalScroll.Visible = False
     Private Sub aTimer_Tick(ByVal sender As Object,
@@ -577,35 +579,48 @@ Public Class MDIForwarders
 
 
     Sub SaveData()
+<<<<<<< HEAD
         Dim node As TreeNode
         node = TreeView1.SelectedNode
         Select Case node.Text
             Case "Advances"
                 FW.InsertAdvances()
             Case "Liquidation"
+=======
+        If saveFile Then
+            Dim node As TreeNode
+            node = TreeView1.SelectedNode
+            Select Case node.Text
+                Case "Advances"
 
-            Case "Main"
+                Case "Liquidation"
+>>>>>>> 86cf9e23fcc6e0a66900b29952b55cfe3618d050
 
-            Case "Details"
-                FW.InsertDetails()
-            Case "Custom Info"
-                FW.InsertCustomInfo()
-            Case "History"
+                Case "Main"
 
-            Case "Certificate Of Payment"
-                FW.InsertCertificateOfPayment()
-            Case "Schedule Of Delivery"
+                Case "Details"
+                    FW.InsertDetails()
+                Case "Custom Info"
+                    FW.InsertCustomInfo()
+                Case "History"
 
-            Case "User Settings"
+                Case "Certificate Of Payment"
+                    FW.InsertCertificateOfPayment()
+                Case "Schedule Of Delivery"
 
-            Case "Billing"
+                Case "User Settings"
 
-        End Select
+                Case "Billing"
+
+            End Select
+            saveFile = False
+        End If
+
     End Sub
 
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
-
+        saveFile = False
 
         Dim node As TreeNode
         node = TreeView1.SelectedNode
@@ -714,7 +729,7 @@ Public Class MDIForwarders
     End Sub
 
     Sub NewData()
-
+        saveFile = True
         Dim node As TreeNode
         node = TreeView1.SelectedNode
         Select Case node.Text
