@@ -18,6 +18,7 @@
         TextBox3.Text = FW.ReceivedBy
         TextBox4.Text = FW.ExpirationDate
         TextBox5.Text = FW.ApprovalDate
+        'tiytyu
 
     End Sub
     Public Sub ClearDetails()
