@@ -329,7 +329,6 @@ Public Class MDIForwarders
                 End With
 
             Case "Custom Info"
-
                 With CustomInfo
                     .ControlBox = False
                     .MinimizeBox = False
@@ -683,7 +682,9 @@ Public Class MDIForwarders
                     MessageBox.Show("Enter File Number")
                 Else
                     FW.GetAllDataDetails(CustomInfo.txtFileNo.Text)
+                    FW.GetAllCustomInfo(CustomInfo.txtFileNo.Text)
                     CustomInfo.populateToFields()
+                    CustomInfo.populateToFieldsCustomInfo()
                 End If
 
             Case "History"

@@ -73,5 +73,37 @@
     Private Sub ComboBox6_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox6.SelectedIndexChanged
 
     End Sub
-    'asdsadasdasdas
+    Public Sub populateToFieldsCustomInfo()
+
+        TextBox30.Text = FW.OfficeCode
+        TextBox31.Text = FW.CECode
+        TextBox32.Text = FW.CountryofOrigin
+        TextBox33.Text = FW.TermsofDelievery
+        TextBox34.Text = FW.Currency
+        TextBox35.Text = FW.ExchangeRate
+        TextBox36.Text = FW.TotalCustomsValue
+        TextBox37.Text = FW.PickupLocation
+        TextBox38.Text = FW.LocationofGoods
+        TextBox39.Text = FW.PortofLoading
+        TextBox40.Text = FW.PortofDischarge
+        ComboBox3.Text = FW.StorageBegin
+        ComboBox4.Text = FW.StorageEnd
+        ComboBox2.Text = FW.DemurrageBegin
+        ComboBox1.Text = FW.DemurrageEnd
+        TextBox41.Text = FW.CBM
+        TextBox42.Text = FW.EntryNo
+        ComboBox5.Text = FW.TimeSendDate
+        TextBox45.Text = FW.TimeSendTime
+        TextBox43.Text = FW.Selectivity
+        ComboBox6.Text = FW.FinalAssessDate
+        TextBox46.Text = FW.FinalAssessTime
+        If FW.Payment = "1" Then
+            CheckBox12.Checked = True
+        End If
+
+        ComboBox7.Text = FW.PaymentTimeDate
+        TextBox47.Text = FW.PaymentTime
+        TextBox44.Text = FW.CUDVAT
+    End Sub
+
 End Class
