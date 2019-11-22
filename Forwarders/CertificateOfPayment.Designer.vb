@@ -26,6 +26,9 @@ Partial Class CertificateOfPayment
         Me.TextBox50 = New System.Windows.Forms.TextBox()
         Me.TextBox49 = New System.Windows.Forms.TextBox()
         Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.TextBox60 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox62 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox51 = New System.Windows.Forms.DateTimePicker()
         Me.Label80 = New System.Windows.Forms.Label()
         Me.Label79 = New System.Windows.Forms.Label()
         Me.Label78 = New System.Windows.Forms.Label()
@@ -52,6 +55,9 @@ Partial Class CertificateOfPayment
         Me.TextBox48 = New System.Windows.Forms.TextBox()
         Me.DataGridView7 = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TextBox2 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox5 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox4 = New System.Windows.Forms.DateTimePicker()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -78,12 +84,6 @@ Partial Class CertificateOfPayment
         Me.txtFileNo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboStatus = New System.Windows.Forms.ComboBox()
-        Me.TextBox2 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox5 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox4 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox51 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox62 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox60 = New System.Windows.Forms.DateTimePicker()
         Me.Panel10.SuspendLayout()
         CType(Me.DataGridView7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -147,6 +147,30 @@ Partial Class CertificateOfPayment
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(828, 452)
         Me.Panel10.TabIndex = 14
+        '
+        'TextBox60
+        '
+        Me.TextBox60.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox60.Location = New System.Drawing.Point(291, 414)
+        Me.TextBox60.Name = "TextBox60"
+        Me.TextBox60.Size = New System.Drawing.Size(156, 20)
+        Me.TextBox60.TabIndex = 115
+        '
+        'TextBox62
+        '
+        Me.TextBox62.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox62.Location = New System.Drawing.Point(291, 362)
+        Me.TextBox62.Name = "TextBox62"
+        Me.TextBox62.Size = New System.Drawing.Size(156, 20)
+        Me.TextBox62.TabIndex = 114
+        '
+        'TextBox51
+        '
+        Me.TextBox51.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox51.Location = New System.Drawing.Point(647, 16)
+        Me.TextBox51.Name = "TextBox51"
+        Me.TextBox51.Size = New System.Drawing.Size(156, 20)
+        Me.TextBox51.TabIndex = 113
         '
         'Label80
         '
@@ -370,6 +394,30 @@ Partial Class CertificateOfPayment
         Me.Panel1.Size = New System.Drawing.Size(449, 87)
         Me.Panel1.TabIndex = 70
         '
+        'TextBox2
+        '
+        Me.TextBox2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox2.Location = New System.Drawing.Point(93, 29)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 112
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox5.Location = New System.Drawing.Point(346, 32)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox5.TabIndex = 111
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox4.Location = New System.Drawing.Point(346, 6)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 110
+        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -584,61 +632,13 @@ Partial Class CertificateOfPayment
         '
         'cboStatus
         '
-        Me.cboStatus.Enabled = False
+        Me.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboStatus.FormattingEnabled = True
         Me.cboStatus.Items.AddRange(New Object() {"Pending", "Approve", "On Transit"})
         Me.cboStatus.Location = New System.Drawing.Point(519, 12)
         Me.cboStatus.Name = "cboStatus"
         Me.cboStatus.Size = New System.Drawing.Size(121, 21)
         Me.cboStatus.TabIndex = 97
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.TextBox2.Location = New System.Drawing.Point(93, 29)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 112
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.TextBox5.Location = New System.Drawing.Point(346, 32)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 111
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.TextBox4.Location = New System.Drawing.Point(346, 6)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 110
-        '
-        'TextBox51
-        '
-        Me.TextBox51.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.TextBox51.Location = New System.Drawing.Point(647, 16)
-        Me.TextBox51.Name = "TextBox51"
-        Me.TextBox51.Size = New System.Drawing.Size(156, 20)
-        Me.TextBox51.TabIndex = 113
-        '
-        'TextBox62
-        '
-        Me.TextBox62.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.TextBox62.Location = New System.Drawing.Point(291, 362)
-        Me.TextBox62.Name = "TextBox62"
-        Me.TextBox62.Size = New System.Drawing.Size(156, 20)
-        Me.TextBox62.TabIndex = 114
-        '
-        'TextBox60
-        '
-        Me.TextBox60.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.TextBox60.Location = New System.Drawing.Point(291, 414)
-        Me.TextBox60.Name = "TextBox60"
-        Me.TextBox60.Size = New System.Drawing.Size(156, 20)
-        Me.TextBox60.TabIndex = 115
         '
         'CertificateOfPayment
         '

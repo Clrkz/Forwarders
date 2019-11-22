@@ -888,4 +888,29 @@ Liquidated,'" & fileno & "' FROM tempAdvExpenses
         middlename = rs.Fields("middlename").Value
         lastname = rs.Fields("lastname").Value
     End Sub
+
+
+    Public Sub getLiquid(valueToSearch As String)
+        Dim Dataset As New DataSet
+        Dim DataAdapter As New OleDbDataAdapter
+        Dim rs As New ADODB.Recordset
+        rs.CursorLocation = ADODB.CursorLocationEnum.adUseClient
+        rs.CursorType = ADODB.CursorTypeEnum.adOpenStatic
+        rs.LockType = ADODB.LockTypeEnum.adLockBatchOptimistic
+        ' rs.Open("Select FileNo,Customer  From Details Where FileNo LIKE '%" + valueToSearch.Trim + "%'", gs_Conn, 2)
+        rs.Open("select a.RefNo as 'Ref. No.', b.ExpenseID,b.Particular,b.ApprovedAmount,b.Liquidated,b.FileNo from Advances1 a
+inner join Advances2 b
+on a.FileNo=b.FileNo
+where a.FileNo =  '" & valueToSearch.Trim & "' or  a.RefNo =  '" & valueToSearch.Trim & "'", gs_Conn, 2)
+        DataAdapter.Fill(Dataset, rs, "Advances1")
+        Liquidation.DataGridView1.DataSource = Dataset.Tables(0)
+        Liquidation.DataGridView1.ReadOnly = True
+        Liquidation.DataGridView1.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Liquidation.DataGridView1.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Liquidation.DataGridView1.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Liquidation.DataGridView1.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Liquidation.DataGridView1.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Liquidation.DataGridView1.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+    End Sub
+
 End Module

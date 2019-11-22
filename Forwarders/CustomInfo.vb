@@ -1,7 +1,7 @@
 ﻿Public Class CustomInfo
     Private Sub CustomInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.AutoScroll = True
-        'cboStatus.SelectedIndex = 0
+        cboStatus.SelectedIndex = 0
         txtDateEncoded.ReadOnly = True
         Timer1.Start()
         TextBox45.Text = TimeOfDay.ToString("hh:mm:ss")
@@ -130,5 +130,9 @@
 
     Private Sub ComboBox7_ValueChanged(sender As Object, e As EventArgs) Handles ComboBox7.ValueChanged
         TextBox47.Text = TimeOfDay.ToString("hh:mm:ss")
+    End Sub
+
+    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
+
     End Sub
 End Class

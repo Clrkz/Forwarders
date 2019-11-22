@@ -9,5 +9,6 @@
 
     Private Sub Liquidation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.AutoScroll = True
+        FW.getLiquid("RN1574439213257")
     End Sub
 End Class

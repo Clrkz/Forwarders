@@ -26,6 +26,9 @@ Partial Class CustomInfo
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.ComboBox7 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox6 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox5 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox47 = New System.Windows.Forms.TextBox()
         Me.TextBox46 = New System.Windows.Forms.TextBox()
         Me.TextBox45 = New System.Windows.Forms.TextBox()
@@ -40,6 +43,10 @@ Partial Class CustomInfo
         Me.Label61 = New System.Windows.Forms.Label()
         Me.Label60 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.ComboBox4 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox1 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox2 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox3 = New System.Windows.Forms.DateTimePicker()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label59 = New System.Windows.Forms.Label()
@@ -69,6 +76,9 @@ Partial Class CustomInfo
         Me.TextBox31 = New System.Windows.Forms.TextBox()
         Me.TextBox30 = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TextBox2 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox5 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox4 = New System.Windows.Forms.DateTimePicker()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -95,16 +105,6 @@ Partial Class CustomInfo
         Me.txtFileNo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboStatus = New System.Windows.Forms.ComboBox()
-        Me.TextBox2 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox5 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox4 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox3 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox2 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox1 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox4 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox5 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox6 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox7 = New System.Windows.Forms.DateTimePicker()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel7.SuspendLayout()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -179,6 +179,30 @@ Partial Class CustomInfo
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(270, 232)
         Me.Panel9.TabIndex = 25
+        '
+        'ComboBox7
+        '
+        Me.ComboBox7.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ComboBox7.Location = New System.Drawing.Point(80, 142)
+        Me.ComboBox7.Name = "ComboBox7"
+        Me.ComboBox7.Size = New System.Drawing.Size(104, 20)
+        Me.ComboBox7.TabIndex = 116
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ComboBox6.Location = New System.Drawing.Point(80, 98)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(104, 20)
+        Me.ComboBox6.TabIndex = 115
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ComboBox5.Location = New System.Drawing.Point(81, 46)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(104, 20)
+        Me.ComboBox5.TabIndex = 114
         '
         'TextBox47
         '
@@ -301,6 +325,38 @@ Partial Class CustomInfo
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(260, 125)
         Me.Panel8.TabIndex = 24
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ComboBox4.Location = New System.Drawing.Point(114, 32)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(121, 20)
+        Me.ComboBox4.TabIndex = 113
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ComboBox1.Location = New System.Drawing.Point(114, 89)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 20)
+        Me.ComboBox1.TabIndex = 112
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ComboBox2.Location = New System.Drawing.Point(114, 63)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 20)
+        Me.ComboBox2.TabIndex = 111
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.ComboBox3.Location = New System.Drawing.Point(114, 6)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(121, 20)
+        Me.ComboBox3.TabIndex = 110
         '
         'Label14
         '
@@ -550,6 +606,30 @@ Partial Class CustomInfo
         Me.Panel1.Size = New System.Drawing.Size(449, 87)
         Me.Panel1.TabIndex = 70
         '
+        'TextBox2
+        '
+        Me.TextBox2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox2.Location = New System.Drawing.Point(93, 29)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 109
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox5.Location = New System.Drawing.Point(346, 32)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox5.TabIndex = 108
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TextBox4.Location = New System.Drawing.Point(346, 6)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 107
+        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -764,93 +844,13 @@ Partial Class CustomInfo
         '
         'cboStatus
         '
-        Me.cboStatus.Enabled = False
+        Me.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboStatus.FormattingEnabled = True
         Me.cboStatus.Items.AddRange(New Object() {"Pending", "Approve", "On Transit"})
         Me.cboStatus.Location = New System.Drawing.Point(535, 12)
         Me.cboStatus.Name = "cboStatus"
         Me.cboStatus.Size = New System.Drawing.Size(121, 21)
         Me.cboStatus.TabIndex = 97
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.TextBox2.Location = New System.Drawing.Point(93, 29)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 109
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.TextBox5.Location = New System.Drawing.Point(346, 32)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 108
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.TextBox4.Location = New System.Drawing.Point(346, 6)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 107
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.ComboBox3.Location = New System.Drawing.Point(114, 6)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 20)
-        Me.ComboBox3.TabIndex = 110
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.ComboBox2.Location = New System.Drawing.Point(114, 63)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 20)
-        Me.ComboBox2.TabIndex = 111
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.ComboBox1.Location = New System.Drawing.Point(114, 89)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 20)
-        Me.ComboBox1.TabIndex = 112
-        '
-        'ComboBox4
-        '
-        Me.ComboBox4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.ComboBox4.Location = New System.Drawing.Point(114, 32)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(121, 20)
-        Me.ComboBox4.TabIndex = 113
-        '
-        'ComboBox5
-        '
-        Me.ComboBox5.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.ComboBox5.Location = New System.Drawing.Point(81, 46)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(104, 20)
-        Me.ComboBox5.TabIndex = 114
-        '
-        'ComboBox6
-        '
-        Me.ComboBox6.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.ComboBox6.Location = New System.Drawing.Point(80, 98)
-        Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(104, 20)
-        Me.ComboBox6.TabIndex = 115
-        '
-        'ComboBox7
-        '
-        Me.ComboBox7.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.ComboBox7.Location = New System.Drawing.Point(80, 142)
-        Me.ComboBox7.Name = "ComboBox7"
-        Me.ComboBox7.Size = New System.Drawing.Size(104, 20)
-        Me.ComboBox7.TabIndex = 116
         '
         'CustomInfo
         '
