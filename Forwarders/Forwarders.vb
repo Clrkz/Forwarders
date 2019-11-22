@@ -677,7 +677,16 @@ Public Class MDIForwarders
                     Advances.populateToFields()
                 End If
             Case "Liquidation"
+                If Liquidation.TextBox1.Text <> "" Then
+                    FW.getAdvances(Liquidation.TextBox1.Text)
+                    FW.getLiquidation(Liquidation.TextBox1.Text)
+                ElseIf Liquidation.TextBox3.Text <> "" Then
+                    FW.getAdvances(Liquidation.TextBox3.Text)
+                    FW.getLiquidation(Liquidation.TextBox3.Text)
+                Else
+                    MessageBox.Show("Enter Reference Number or File Number")
 
+                End If
             Case "Main"
 
             Case "Details"
