@@ -8,5 +8,7 @@
 
     End Sub
 
-
+    Private Sub btnInsert_Click(sender As Object, e As EventArgs) Handles btnInsert.Click
+        FW.InsertAdvExpense()
+    End Sub
 End Class

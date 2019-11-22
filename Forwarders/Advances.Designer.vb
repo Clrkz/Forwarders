@@ -62,6 +62,15 @@ Partial Class Advances
         Me.Label17 = New System.Windows.Forms.Label()
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.btnInsert = New System.Windows.Forms.Button()
+        Me.txtLiquidated = New System.Windows.Forms.TextBox()
+        Me.txtApprovedAmount = New System.Windows.Forms.TextBox()
+        Me.txtAmount = New System.Windows.Forms.TextBox()
+        Me.textParticular = New System.Windows.Forms.TextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -408,11 +417,93 @@ Partial Class Advances
         Me.Label18.TabIndex = 39
         Me.Label18.Text = "Pending" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Comments" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
+        'btnInsert
+        '
+        Me.btnInsert.Location = New System.Drawing.Point(817, 337)
+        Me.btnInsert.Name = "btnInsert"
+        Me.btnInsert.Size = New System.Drawing.Size(75, 23)
+        Me.btnInsert.TabIndex = 59
+        Me.btnInsert.Text = "Insert"
+        Me.btnInsert.UseVisualStyleBackColor = True
+        '
+        'txtLiquidated
+        '
+        Me.txtLiquidated.Location = New System.Drawing.Point(840, 298)
+        Me.txtLiquidated.Name = "txtLiquidated"
+        Me.txtLiquidated.Size = New System.Drawing.Size(111, 20)
+        Me.txtLiquidated.TabIndex = 58
+        '
+        'txtApprovedAmount
+        '
+        Me.txtApprovedAmount.Location = New System.Drawing.Point(840, 272)
+        Me.txtApprovedAmount.Name = "txtApprovedAmount"
+        Me.txtApprovedAmount.Size = New System.Drawing.Size(111, 20)
+        Me.txtApprovedAmount.TabIndex = 57
+        '
+        'txtAmount
+        '
+        Me.txtAmount.Location = New System.Drawing.Point(840, 246)
+        Me.txtAmount.Name = "txtAmount"
+        Me.txtAmount.Size = New System.Drawing.Size(111, 20)
+        Me.txtAmount.TabIndex = 56
+        '
+        'textParticular
+        '
+        Me.textParticular.Location = New System.Drawing.Point(840, 220)
+        Me.textParticular.Name = "textParticular"
+        Me.textParticular.Size = New System.Drawing.Size(111, 20)
+        Me.textParticular.TabIndex = 55
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(778, 301)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(56, 13)
+        Me.Label23.TabIndex = 54
+        Me.Label23.Text = "Liquidated"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(742, 275)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(92, 13)
+        Me.Label22.TabIndex = 53
+        Me.Label22.Text = "Approved Amount"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(791, 249)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(43, 13)
+        Me.Label21.TabIndex = 52
+        Me.Label21.Text = "Amount"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(783, 223)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(51, 13)
+        Me.Label20.TabIndex = 51
+        Me.Label20.Text = "Particular"
+        '
         'Advances
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(743, 595)
+        Me.ClientSize = New System.Drawing.Size(967, 595)
+        Me.Controls.Add(Me.btnInsert)
+        Me.Controls.Add(Me.txtLiquidated)
+        Me.Controls.Add(Me.txtApprovedAmount)
+        Me.Controls.Add(Me.txtAmount)
+        Me.Controls.Add(Me.textParticular)
+        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.Label21)
+        Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.TextBox17)
         Me.Controls.Add(Me.Label17)
@@ -502,4 +593,13 @@ Partial Class Advances
     Friend WithEvents Label17 As Label
     Friend WithEvents TextBox17 As TextBox
     Friend WithEvents Label18 As Label
+    Friend WithEvents btnInsert As Button
+    Friend WithEvents txtLiquidated As TextBox
+    Friend WithEvents txtApprovedAmount As TextBox
+    Friend WithEvents txtAmount As TextBox
+    Friend WithEvents textParticular As TextBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label20 As Label
 End Class

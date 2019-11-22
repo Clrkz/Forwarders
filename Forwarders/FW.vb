@@ -6,6 +6,7 @@ Imports System.IO
 Imports System.Data.SqlClient
 
 Module FW
+    Public count As Int16
     Public gs_Conn As String = "FILE NAME=" & App_Path() & "\FW.udl"
     Public gs_User As String
     'get all search data from Details Tab
@@ -538,6 +539,39 @@ CUDVAT From CustomInfo Where FileNo = '" + valueToSearch.Trim + "'", gs_Conn, 2)
             LCBank = rs.Fields(51).Value.ToString
             DataAdapter.Fill(Dataset, rs, "CustomInfo")
         End If
+    End Sub
+
+    Sub CountAdvExpense()
+        mdl.ds = New DataSet
+        mdl.adapter = New SqlDataAdapter("SELECT * FROM AdvExpenses", mdl.conn)
+
+        count = mdl.adapter.Fill(mdl.ds, "AdvExpenses")
+    End Sub
+
+    Public Sub InsertAdvExpense()
+        'Dim particular, amount, approvedamount, liquidated As String
+
+        CountAdvExpense()
+
+        mdl.ds = New DataSet
+        mdl.adapter = New SqlDataAdapter("INSERT INTO AdvExpenses(
+ExpenseID,
+Particular,
+Amount,
+ApprovedAmount,
+Liquidated) VALUES(
+'" & (count + 1) & "', 
+'" & Advances.textParticular.Text.Trim & "', 
+'" & Advances.txtAmount.Text.Trim & "', 
+'" & Advances.txtApprovedAmount.Text.Trim & "', 
+'" & Advances.txtLiquidated.Text.Trim & "'", mdl.conn)
+
+        mdl.adapter.Fill(mdl.ds, "AdvExpenses")
+
+        Advances.textParticular.Text = ""
+        Advances.txtAmount.Text = ""
+        Advances.txtApprovedAmount.Text = ""
+        Advances.txtLiquidated.Text = ""
     End Sub
 
     Public Sub InsertCustomInfo()
