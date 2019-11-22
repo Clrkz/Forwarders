@@ -22,7 +22,7 @@ Partial Class Advances
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.chkReceipted = New System.Windows.Forms.CheckBox()
         Me.txtRefNo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -52,7 +52,7 @@ Partial Class Advances
         Me.txtTotalLiquidated = New System.Windows.Forms.TextBox()
         Me.txtTotalApprovedAmount = New System.Windows.Forms.TextBox()
         Me.txtTotalAmount = New System.Windows.Forms.TextBox()
-        Me.txtTotalAll = New System.Windows.Forms.TextBox()
+        Me.txtNote = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.txtEncodedBy = New System.Windows.Forms.TextBox()
         Me.txtNotedBy = New System.Windows.Forms.TextBox()
@@ -74,16 +74,16 @@ Partial Class Advances
         CType(Me.dgvAdvExpenses, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'CheckBox1
+        'chkReceipted
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(78, 13)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(84, 17)
-        Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "Receipted"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.chkReceipted.AutoSize = True
+        Me.chkReceipted.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkReceipted.Location = New System.Drawing.Point(78, 13)
+        Me.chkReceipted.Name = "chkReceipted"
+        Me.chkReceipted.Size = New System.Drawing.Size(84, 17)
+        Me.chkReceipted.TabIndex = 0
+        Me.chkReceipted.Text = "Receipted"
+        Me.chkReceipted.UseVisualStyleBackColor = True
         '
         'txtRefNo
         '
@@ -328,14 +328,14 @@ Partial Class Advances
         Me.txtTotalAmount.Size = New System.Drawing.Size(100, 20)
         Me.txtTotalAmount.TabIndex = 29
         '
-        'txtTotalAll
+        'txtNote
         '
-        Me.txtTotalAll.Location = New System.Drawing.Point(135, 434)
-        Me.txtTotalAll.Multiline = True
-        Me.txtTotalAll.Name = "txtTotalAll"
-        Me.txtTotalAll.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtTotalAll.Size = New System.Drawing.Size(578, 53)
-        Me.txtTotalAll.TabIndex = 30
+        Me.txtNote.Location = New System.Drawing.Point(135, 434)
+        Me.txtNote.Multiline = True
+        Me.txtNote.Name = "txtNote"
+        Me.txtNote.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtNote.Size = New System.Drawing.Size(578, 53)
+        Me.txtNote.TabIndex = 30
         '
         'Label14
         '
@@ -343,9 +343,9 @@ Partial Class Advances
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(93, 455)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(31, 13)
+        Me.Label14.Size = New System.Drawing.Size(30, 13)
         Me.Label14.TabIndex = 31
-        Me.Label14.Text = "Total"
+        Me.Label14.Text = "Note"
         '
         'txtEncodedBy
         '
@@ -513,7 +513,7 @@ Partial Class Advances
         Me.Controls.Add(Me.txtNotedBy)
         Me.Controls.Add(Me.txtEncodedBy)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.txtTotalAll)
+        Me.Controls.Add(Me.txtNote)
         Me.Controls.Add(Me.txtTotalAmount)
         Me.Controls.Add(Me.txtTotalApprovedAmount)
         Me.Controls.Add(Me.txtTotalLiquidated)
@@ -543,7 +543,7 @@ Partial Class Advances
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtRefNo)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.chkReceipted)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Advances"
         Me.Text = "Advances"
@@ -553,7 +553,7 @@ Partial Class Advances
 
     End Sub
 
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents chkReceipted As CheckBox
     Friend WithEvents txtRefNo As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -583,7 +583,7 @@ Partial Class Advances
     Friend WithEvents txtTotalLiquidated As TextBox
     Friend WithEvents txtTotalApprovedAmount As TextBox
     Friend WithEvents txtTotalAmount As TextBox
-    Friend WithEvents txtTotalAll As TextBox
+    Friend WithEvents txtNote As TextBox
     Friend WithEvents Label14 As Label
     Friend WithEvents txtEncodedBy As TextBox
     Friend WithEvents txtNotedBy As TextBox

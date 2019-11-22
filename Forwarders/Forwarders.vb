@@ -581,6 +581,14 @@ Public Class MDIForwarders
 
 
     Sub SaveData()
+<<<<<<< HEAD
+        Dim node As TreeNode
+        node = TreeView1.SelectedNode
+        Select Case node.Text
+            Case "Advances"
+                FW.InsertAdvances()
+            Case "Liquidation"
+=======
         If saveFile Then
             Dim node As TreeNode
             node = TreeView1.SelectedNode
@@ -588,6 +596,7 @@ Public Class MDIForwarders
                 Case "Advances"
 
                 Case "Liquidation"
+>>>>>>> 86cf9e23fcc6e0a66900b29952b55cfe3618d050
 
                 Case "Main"
 
